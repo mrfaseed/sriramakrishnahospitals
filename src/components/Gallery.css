@@ -1,1 +1,4 @@
-﻿/* Gallery.css */
+﻿.Gallery {
+    padding: 2rem;
+    text-align: center;
+}

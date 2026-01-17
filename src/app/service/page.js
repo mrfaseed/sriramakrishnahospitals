@@ -1,3 +1,5 @@
-﻿export default function Service() {
-  return (<div>This is the service Page file</div>);
+﻿import Services from "../../components/Services";
+
+export default function Service() {
+  return <Services />;
 }
