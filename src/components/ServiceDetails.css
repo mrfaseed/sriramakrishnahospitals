@@ -1,0 +1,138 @@
+.service-details-container {
+    padding: 2rem 0;
+    font-family: "Google Sans", sans-serif;
+    background-color: #efd4f4bd;;
+    color: var(--text-primary);
+}
+
+.details-header {
+    text-align: center;
+    padding: 4rem 10%;
+    background: linear-gradient(180deg, var(--lavender-light) 0%, #fff 100%);
+    margin-bottom: 3rem;
+}
+
+.details-header h1 {
+    font-family: "momo trust display", sans-serif;
+    font-size: 3.5rem;
+    color: var(--lavender-deep);
+    margin-bottom: 1rem;
+}
+
+.details-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.detail-section {
+    background-color: #f6e8f6;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--lavender-light);
+}
+
+.detail-section h2 {
+    font-size: 2.5rem;
+    color: var(--primary-main);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--lavender-light);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.detail-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
+}
+
+.feature-list li::before {
+    content: '•';
+    color: var(--primary-main);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+/* Sub-detail Grid for Cardilogy etc */
+.sub-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.sub-detail-card {
+    background: var(--lavender-light);
+    padding: 1.5rem;
+    border-radius: 15px;
+    transition: transform 0.2s;
+}
+
+.sub-detail-card:hover {
+    transform: translateY(-5px);
+}
+
+.sub-detail-card h3 {
+    font-size: 1.2rem;
+    color: var(--lavender-deep);
+    margin-bottom: 0.8rem;
+}
+
+.sub-detail-card p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .details-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .detail-section {
+        padding: 1.5rem;
+    }
+
+    .detail-section h2 {
+        font-size: 2rem;
+    }
+}
+
+.back-link {
+    border: 1px solid #000000;
+    padding: 10px;
+    border-radius: 30px;
+    display: inline-block;
+    margin: 1rem 0 0 5%;
+    background-color: #ffffff;
+    color: var(--primary-main);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.back-link:hover {
+    background: linear-gradient(to right, #ffffff, #f0d4f5);
+    color: #000000;
+    transform: translateX(-5px);
+}

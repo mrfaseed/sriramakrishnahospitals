@@ -1,4 +1,211 @@
-﻿.Services {
-    padding: 2rem;
+﻿:root {
+    --white: #ffffff;
+    --lavender-light: #f3f0ff;
+    --lavender-medium: #dcd6f7;
+    --lavender-rich: #a69cac;
+    --lavender-deep: #4a4063;
+    --primary-main: #7b68ee;
+    --text-primary: #2c2c2c;
+    --text-secondary: #555555;
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --glass-border: rgba(255, 255, 255, 0.9);
+    --shadow-soft: 0 10px 30px rgba(123, 104, 238, 0.15);
+    --shadow-hover: 0 20px 40px rgba(123, 104, 238, 0.25);
+}
+
+.services-app-container {
+    width: 100%;
+    overflow-x: hidden;
+    color: var(--text-primary);
+    background-color: #efd4f4bd;
+    /* Matching the user's updated background preference */
+    font-family: "Google Sans", sans-serif;
+    min-height: 100vh;
+}
+
+/* --- Hero --- */
+.services-hero {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    background: radial-gradient(circle at center, #fff 0%, transparent 100%);
+    padding: 2rem;
+}
+
+.services-title {
+    font-family: "momo trust display", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--lavender-deep);
+    margin-bottom: 1rem;
+}
+
+.text-highlight {
+    color: var(--primary-main);
+}
+
+.services-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+}
+
+/* --- Service List --- */
+.services-list-section {
+    padding: 4rem 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 2.5rem;
+    padding-bottom: 5rem;
+    /* Space for the button */
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    position: relative;
+    /* For button positioning */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* .view-more-btn styling - absolute positioning */
+.view-more-btn {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+    /* Vibrant Gradient */
+    color: var(--primary-main);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.view-more-btn:hover {
+    background: linear-gradient(135deg, #cfb9e6 0%, #b893d2 100%);
+    color: var(--white);
+}
+
+.service-icon {
+    font-size: 3rem;
+    background: var(--lavender-light);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.service-info h3 {
+    font-size: 1.75rem;
+    color: var(--lavender-deep);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.service-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+/* --- Sub Features (Cardiology) --- */
+.sub-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+.sub-feature {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.feature-icon {
+    font-size: 1.5rem;
+    color: var(--primary-main);
+}
+
+.feature-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-text strong {
+    font-size: 1rem;
+    color: var(--lavender-deep);
+}
+
+.feature-text span {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* Feature highlight style */
+.featured-card {
+    border-left: 5px solid var(--primary-main);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .service-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sub-features-grid {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .services-title {
+        font-size: 2.5rem;
+    }
 }

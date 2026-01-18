@@ -10,7 +10,7 @@ export default function Home() {
         <div className='home-hero-content'>
           <h1 className='home-title'>Advanced Healthcare,<br /> <span className='text-highlight'>Trusted Care</span></h1>
           <p className='home-subtitle'>Your Health, Our Priority. Experience world-class medical facilities.</p>
-          <button className='cta-button'>Book an Appointment</button>
+          <button className='cta-button'>Contact Us</button>
         </div>
       </section>
 
