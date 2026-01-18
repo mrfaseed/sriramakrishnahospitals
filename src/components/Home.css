@@ -1,4 +1,107 @@
-﻿.Home {
-    padding: 2rem;
-    text-align: center;
+﻿.home-app-container {
+    width: 100%;
+    overflow-x: hidden;
+    color: var(--text-primary);
+    background-color: var(--white);
+    font-family: "Google Sans", sans-serif;
+}
+
+/* --- Home Hero --- */
+.home-hero {
+    height: 90vh;
+    /* Taller than about hero */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    background: linear-gradient(120deg, var(--lavender-light) 0%, #fff 50%, var(--lavender-medium) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.home-hero::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    width: 50%;
+    height: 80%;
+    background: radial-gradient(circle, var(--primary-main) 0%, transparent 60%);
+    opacity: 0.1;
+    filter: blur(80px);
+}
+
+.home-hero-content {
+    max-width: 600px;
+    z-index: 2;
+}
+
+.home-title {
+    font-family: "momo trust display", sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+    /* Extra bold */
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--lavender-deep);
+}
+
+.home-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    color: var(--text-secondary);
+    max-width: 500px;
+}
+
+.cta-button {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--primary-main);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(123, 104, 238, 0.3);
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(123, 104, 238, 0.4);
+    background: var(--lavender-deep);
+}
+
+/* Home specific tweak for reused sections */
+.home-about-section {
+    background: var(--white);
+}
+
+.read-more-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: var(--primary-main);
+    font-weight: 600;
+    text-decoration: none;
+    transition: gap 0.3s ease;
+}
+
+.read-more-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .home-hero {
+        height: auto;
+        padding: 6rem 5%;
+        text-align: center;
+    }
+
+    .home-hero-content {
+        margin: 0 auto;
+    }
+
+    .home-title {
+        font-size: 2.5rem;
+    }
 }
