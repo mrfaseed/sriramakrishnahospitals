@@ -1,5 +1,12 @@
 import { Geist, Geist_Mono, Open_Sans } from "next/font/google";
 import "./globals.css";
+import "../components/Home.css";
+import "../components/AboutUs.css";
+import "../components/Nav.css";
+import "../components/Contact.css";
+import "../components/Services.css";
+import "../components/ServiceDetails.css";
+import "../components/Gallery.css";
 import Nav from "../components/Nav";
 
 const geistSans = Geist({

@@ -1,6 +1,5 @@
-﻿import React from 'react';
-import './Home.css';
-import '../components/AboutUs.css'; // Importing AboutUs styles to reuse them
+﻿import Link from 'next/link';
+
 
 export default function Home() {
   return (
@@ -10,7 +9,9 @@ export default function Home() {
         <div className='home-hero-content'>
           <h1 className='home-title'>Advanced Healthcare,<br /> <span className='text-highlight'>Trusted Care</span></h1>
           <p className='home-subtitle'>Your Health, Our Priority. Experience world-class medical facilities.</p>
-          <button className='cta-button'>Contact Us</button>
+          <Link href="/contact" className='cta-button'>
+            Contact Us
+          </Link>
         </div>
       </section>
 

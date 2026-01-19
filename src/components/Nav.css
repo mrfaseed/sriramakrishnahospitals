@@ -1,34 +1,95 @@
-﻿.navbar {
+﻿/* Unsetting default body margins if not already handled generally */
+body {
+    margin: 0;
+    font-family: "Google Sans", sans-serif;
+}
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: #333;
-    color: white;
+    padding: 1rem 5%;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
 }
 
 .logo a {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
+    font-family: "momo trust display", sans-serif;
+    /* Matching hero title font if available, or Google Sans fallback */
+    font-size: 1.8rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #4a4063 0%, #7b68ee 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-decoration: none;
+    letter-spacing: -0.02em;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 1.5rem;
+    gap: 1.8rem;
     margin: 0;
     padding: 0;
+    align-items: center;
 }
 
 .nav-links li a {
-    color: white;
+    font-family: "Google Sans Flex", serif;
+    color: #4a4a5e;
+    /* var(--text-secondary) equivalent */
     text-decoration: none;
     font-size: 1rem;
-    transition: color 0.3s;
+    font-weight: 600;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #7b68ee;
+    /* var(--primary-main) */
+    transition: width 0.3s ease;
+    border-radius: 2px;
 }
 
 .nav-links li a:hover {
-    color: #ddd;
+    color: #7b68ee;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 1.5rem;
+    }
+
+    .nav-links {
+        display: none;
+        /* simple hidden for now, or hamburger menu could be added */
+    }
+
+    /* If you want a simple mobile stack override without JS for toggling, 
+       we'd need a checkbox hack or JS. 
+       For now, let's just ensure it doesn't break layout. 
+       Assuming mostly desktop usage or simple responsive. 
+       We will keep it simple as requested for "beautiful design".
+    */
 }
