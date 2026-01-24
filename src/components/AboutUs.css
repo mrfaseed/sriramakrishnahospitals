@@ -1,26 +1,23 @@
-﻿:root {
-    --white: #ffffff;
-    --lavender-light: #f3f0ff;
-    --lavender-medium: #dcd6f7;
-    --lavender-rich: #a69cac;
-    --lavender-deep: #4a4063;
-    --primary-main: #7b68ee;
-    --primary-dark: #5a4bda;
-    --text-primary: #1a1a2e;
-    --text-secondary: #4a4a5e;
-    --glass-bg: #ffffff;
-    --glass-border: rgba(255, 255, 255, 1);
-    --shadow-soft: 0 10px 40px rgba(123, 104, 238, 0.1);
-    --shadow-hover: 0 20px 50px rgba(123, 104, 238, 0.2);
-    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
+﻿/* Scoped variables for About Us page */
 .about-app-container {
+    --white: #ffffff;
+    --red-light: #ffebee;
+    --red-medium: #ffcdd2;
+    --red-deep: #8E2B2B;
+    --red-darker: #5e1b1b;
+    --primary-main: #D32F2F;
+    --text-primary: #ffffff;
+    --text-on-white: #333333;
+    --text-secondary-on-white: #555555;
+
     font-family: "Google Sans", sans-serif;
-    background-color: #efd4f4bd;
-    color: var(--text-primary);
+    /* Red Themed Background (70% dominance) */
+    background-color: #8E2B2B;
+    background: linear-gradient(135deg, #8E2B2B 0%, #5e1b1b 100%);
+    color: #ffffff;
     overflow-x: hidden;
     width: 100%;
+    min-height: 100vh;
 }
 
 /* --- Hero Section --- */
@@ -29,7 +26,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.5) 0%, transparent 60%);
+    /* Subtle overlay pattern or gradient */
+    background: radial-gradient(circle at top right, rgba(211, 47, 47, 0.911) 0%, transparent 1000%);
     position: relative;
     text-align: center;
     padding: 6rem 2rem 4rem;
@@ -44,22 +42,25 @@
     font-family: "momo trust display", sans-serif;
     font-size: 3.5rem;
     font-weight: 800;
-    color: var(--lavender-deep);
+    color: var(--white);
     margin-bottom: 0.5rem;
     letter-spacing: -0.02em;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .hero-subtitle {
+    font-family: "Google Sans Flex", serif;
     font-size: 1.75rem;
     font-weight: 600;
-    color: var(--primary-main);
+    color: var(--red-medium);
     margin-bottom: 1.5rem;
     line-height: 1.3;
 }
 
 .hero-tagline {
+    font-family: "Google Sans Flex", serif;
     font-size: 1.25rem;
-    color: var(--text-secondary);
+    color: #ffffff;
     font-weight: 400;
     max-width: 700px;
     margin: 0 auto;
@@ -72,9 +73,10 @@
 }
 
 .section-heading {
+    font-family: "momo trust display", sans-serif;
     text-align: center;
     font-size: 2.5rem;
-    color: var(--lavender-deep);
+    color: var(--black);
     margin-bottom: 3rem;
     font-weight: 700;
     position: relative;
@@ -87,30 +89,34 @@
     display: block;
     width: 60px;
     height: 4px;
-    background: var(--primary-main);
+    background: var(--red-medium);
     margin: 1rem auto 0;
     border-radius: 2px;
 }
 
 /* --- Heritage Section --- */
+/* 30% White elements as cards */
 .heritage-section .content-card {
     background: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 3rem;
     border-radius: 24px;
-    box-shadow: 0 15px 35px rgba(123, 104, 238, 0.15);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    color: var(--text-on-white);
 }
 
 .heritage-section h2 {
-    font-size: 2rem;
-    color: var(--lavender-deep);
+    font-family: "Google Sans Flex", serif;
+    font-size: 2.3rem;
+    color: var(--red-deep);
     margin-bottom: 1.5rem;
 }
 
 .heritage-section p {
+    font-family: "Google Sans Flex", serif;
     font-size: 1.1rem;
     line-height: 1.8;
-    color: var(--text-secondary);
+    color: var(--text-secondary-on-white);
     margin-bottom: 1.5rem;
 }
 
@@ -129,30 +135,31 @@
     background: #ffffff;
     padding: 2.5rem;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(123, 104, 238, 0.1);
-    border-top: 5px solid var(--primary-main);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-top: 5px solid #D32F2F;
     transition: var(--transition);
 }
 
 .specialty-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(123, 104, 238, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
 .feature-card {
     background: #ffffff;
-    /* Unified white background */
 }
 
 .specialty-card h3 {
+    font-family: "Google Sans Flex", serif;
     font-size: 1.5rem;
-    color: var(--lavender-deep);
+    color: var(--red-deep);
     margin-bottom: 1rem;
     font-weight: 700;
 }
 
 .specialty-card p {
-    color: var(--text-secondary);
+    font-family: "Google Sans Flex", serif;
+    color: var(--text-secondary-on-white);
     line-height: 1.6;
     margin-bottom: 1rem;
 }
@@ -164,10 +171,11 @@
 }
 
 .feature-list li {
+    font-family: "Google Sans Flex", serif;
     padding-left: 1.5rem;
     position: relative;
     margin-bottom: 0.75rem;
-    color: var(--text-primary);
+    color: var(--text-on-white);
     font-weight: 500;
 }
 
@@ -181,9 +189,10 @@
 }
 
 .highlight-note {
+    font-family: "Google Sans Flex", serif;
     font-weight: 600;
     color: var(--primary-dark);
-    background: rgba(123, 104, 238, 0.1);
+    background: var(--red-light);
     padding: 1rem;
     border-radius: 10px;
     font-size: 0.95rem;
@@ -195,20 +204,19 @@
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2.5rem;
     align-items: center;
-    /* Center items vertically so the larger director card looks balanced */
 }
 
 .leader-card {
+    font-family: "Google Sans Flex", serif;
     background: #ffffff;
     padding: 2rem;
     border-radius: 16px;
     text-align: center;
     transition: var(--transition);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 10px 25px rgba(123, 104, 238, 0.1);
+    border: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     position: relative;
     height: 100%;
-    /* Ensure uniform height for grid rows */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -216,28 +224,24 @@
 
 .leader-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(123, 104, 238, 0.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
 }
 
-/* Special Design for Director Card */
+/* Director Card */
 .director-card {
-    background: linear-gradient(145deg, #ffffff, #fdfbff);
-    border: 2px solid var(--primary-main);
+    background: linear-gradient(145deg, #ffffff, #fff5f5);
+    border: 2px solid #D32F2F;
     transform: scale(1.05);
-    /* Slightly larger */
-    box-shadow: 0 20px 50px rgba(123, 104, 238, 0.25);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
     z-index: 2;
-    /* Bring to front */
 }
 
 .director-card:hover {
     transform: scale(1.08) translateY(-5px);
-    box-shadow: 0 25px 60px rgba(123, 104, 238, 0.35);
 }
 
 .director-card::before {
     content: '👑';
-    /* Optional crown icon for visual distinction */
     font-size: 2rem;
     position: absolute;
     top: -20px;
@@ -251,30 +255,31 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border: 2px solid var(--primary-main);
+    border: 2px solid #D32F2F;
 }
 
 .director-card h4 {
+    font-family: "Google Sans Flex", serif;
     color: var(--primary-dark);
     font-size: 1.6rem;
 }
 
 .director-card .leader-role {
-    color: var(--lavender-deep);
+    color: var(--red-deep);
     font-weight: 800;
     letter-spacing: 0.1em;
 }
 
 .leader-card h4 {
     font-size: 1.4rem;
-    color: var(--lavender-deep);
+    color: var(--red-deep);
     margin-bottom: 0.25rem;
 }
 
 .leader-degree {
     display: block;
     font-size: 0.9rem;
-    color: var(--text-secondary);
+    color: var(--text-secondary-on-white);
     margin-bottom: 0.5rem;
     font-style: italic;
 }
@@ -291,7 +296,7 @@
 .leader-desc {
     font-size: 0.95rem;
     line-height: 1.5;
-    color: var(--text-secondary);
+    color: var(--text-secondary-on-white);
 }
 
 /* --- Commitment & Dual Panel --- */
@@ -302,6 +307,7 @@
 }
 
 .panel-content {
+    border: 2px solid #D32F2F;
     flex: 1;
     min-width: 300px;
     background: var(--white);
@@ -313,20 +319,19 @@
     transition: var(--transition);
 }
 
-.panel-content:hover {
-    transform: scale(1.02);
-}
 
 .panel-content h3 {
+    font-family: "Google Sans Flex", serif;
     font-size: 1.75rem;
-    color: var(--lavender-deep);
+    color: var(--red-deep);
     margin-bottom: 1.5rem;
 }
 
 .panel-content p {
+    font-family: "Google Sans Flex", serif;
     font-size: 1.05rem;
     line-height: 1.7;
-    color: var(--text-secondary);
+    color: var(--text-secondary-on-white);
 }
 
 /* --- Vision Mission --- */
@@ -340,20 +345,23 @@
     gap: 3rem;
 }
 
+/* Use white cards for contact/VM too to maintain pure red/white theme */
 .vm-card {
-    background: linear-gradient(135deg, var(--lavender-deep), var(--primary-main));
-    color: var(--white);
+    background: var(--white);
+    color: var(--text-on-white);
     padding: 3rem;
     border-radius: 30px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 15px 35px rgba(74, 64, 99, 0.25);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .vm-icon {
+    font-family: "Google Sans Flex", serif;
     font-size: 3rem;
     margin-bottom: 1.5rem;
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--red-light);
     width: 80px;
     height: 80px;
     display: flex;
@@ -363,15 +371,19 @@
 }
 
 .vm-card h3 {
+    font-family: "Google Sans Flex", serif;
     font-size: 2rem;
+    color: var(--red-deep);
     margin-bottom: 1rem;
 }
 
 .vm-card p {
+    font-family: "Google Sans Flex", serif;
     font-size: 1.1rem;
     line-height: 1.7;
     opacity: 0.95;
     margin-bottom: 1.5rem;
+    color: var(--text-secondary-on-white);
 }
 
 .vm-list {
@@ -385,13 +397,14 @@
     margin-bottom: 0.8rem;
     font-size: 1rem;
     opacity: 0.9;
+    color: var(--text-on-white);
 }
 
 .vm-list li::before {
     content: '➜';
     position: absolute;
     left: 0;
-    color: var(--lavender-medium);
+    color: var(--primary-main);
 }
 
 /* --- Animations --- */
@@ -414,7 +427,6 @@
 .slide-in-up {
     animation: fadeInUp 1s ease-out 0.2s forwards;
     opacity: 0;
-    /* init state */
 }
 
 /* Responsive */

@@ -1,54 +1,67 @@
-﻿:root {
+﻿/* Scoped variables for Services page matching About Us design */
+:root {
     --white: #ffffff;
-    --lavender-light: #f3f0ff;
-    --lavender-medium: #dcd6f7;
-    --lavender-rich: #a69cac;
-    --lavender-deep: #4a4063;
-    --primary-main: #7b68ee;
-    --text-primary: #2c2c2c;
-    --text-secondary: #555555;
-    --glass-bg: rgba(255, 255, 255, 0.8);
-    --glass-border: rgba(255, 255, 255, 0.9);
-    --shadow-soft: 0 10px 30px rgba(123, 104, 238, 0.15);
-    --shadow-hover: 0 20px 40px rgba(123, 104, 238, 0.25);
+    --red-light: #ffebee;
+    --red-medium: #ffcdd2;
+    --red-deep: #8E2B2B;
+    --red-darker: #5e1b1b;
+    --primary-main: #D32F2F;
+    --primary-dark: #B71C1C;
+    --text-primary: #ffffff;
+    --text-on-white: #333333;
+    --text-secondary-on-white: #555555;
+
+    --glass-bg: #ffffff;
+    --glass-border: rgba(255, 255, 255, 1);
+    --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.2);
+    --shadow-hover: 0 20px 50px rgba(0, 0, 0, 0.3);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .services-app-container {
-    width: 100%;
-    overflow-x: hidden;
+    font-family: "Google Sans Flex", serif;
+    /* Red Themed Background (Matching About Us) */
+    background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
     color: var(--text-primary);
-    background-color: #efd4f4bd;
-    /* Matching the user's updated background preference */
-    font-family: "Google Sans", sans-serif;
+    overflow-x: hidden;
+    width: 100%;
     min-height: 100vh;
 }
 
 /* --- Hero --- */
 .services-hero {
-    height: 50vh;
+    min-height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: radial-gradient(circle at center, #fff 0%, transparent 100%);
-    padding: 2rem;
+    /* Matching About Us Hero Background */
+    background: radial-gradient(circle at top right, rgba(211, 47, 47, 0.911) 0%, transparent 1000%);
+    padding: 6rem 2rem 4rem;
+    position: relative;
 }
 
 .services-title {
     font-family: "momo trust display", sans-serif;
     font-size: 3.5rem;
-    font-weight: 700;
-    color: var(--lavender-deep);
-    margin-bottom: 1rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .text-highlight {
-    color: var(--primary-main);
+    color: #ffffff;
 }
 
 .services-subtitle {
+    font-family: "Google Sans Flex", serif;
     font-size: 1.25rem;
-    color: var(--text-secondary);
+    color: var(--red-light);
+    font-weight: 500;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 /* --- Service List --- */
@@ -59,27 +72,31 @@
     gap: 3rem;
     max-width: 1200px;
     margin: 0 auto;
+    background-color: #ffffff;
 }
 
 .service-card {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
+    background: #ffffff;
+    /* White cards */
     border-radius: 20px;
     padding: 2.5rem;
     padding-bottom: 5rem;
     /* Space for the button */
-    box-shadow: var(--shadow-soft);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-top: 5px solid #D32F2F;
+    /* Red top border */
     display: flex;
     align-items: flex-start;
     gap: 2rem;
     position: relative;
     /* For button positioning */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: var(--transition);
+    color: var(--text-on-white);
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
 /* .view-more-btn styling - absolute positioning */
@@ -89,27 +106,28 @@
     right: 2rem;
     display: inline-block;
     padding: 0.8rem 2rem;
-    background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
-    /* Vibrant Gradient */
-    color: var(--primary-main);
+    background: linear-gradient(135deg, #D32F2F 0%, #8E2B2B 100%);
+    /* Red Gradient Button */
+    color: var(--white);
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: none;
     cursor: pointer;
     z-index: 2;
 }
 
 .view-more-btn:hover {
-    background: linear-gradient(135deg, #cfb9e6 0%, #b893d2 100%);
-    color: var(--white);
+    background: linear-gradient(135deg, #8E2B2B 0%, #5e1b1b 100%);
+    transform: scale(1.05);
+    color: #ffffff;
 }
 
 .service-icon {
     font-size: 3rem;
-    background: var(--lavender-light);
+    background: var(--red-light);
     width: 80px;
     height: 80px;
     display: flex;
@@ -120,16 +138,18 @@
 }
 
 .service-info h3 {
+    font-family: "Google Sans Flex", serif;
     font-size: 1.75rem;
-    color: var(--lavender-deep);
+    color: var(--red-deep);
     margin-bottom: 1rem;
     font-weight: 700;
 }
 
 .service-info p {
+    font-family: "Google Sans Flex", serif;
     font-size: 1.1rem;
     line-height: 1.6;
-    color: var(--text-secondary);
+    color: var(--text-secondary-on-white);
     margin-bottom: 1.5rem;
 }
 
@@ -139,7 +159,7 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
-    background: rgba(255, 255, 255, 0.5);
+    background: var(--red-light);
     padding: 1.5rem;
     border-radius: 15px;
 }
@@ -161,13 +181,15 @@
 }
 
 .feature-text strong {
+    font-family: "Google Sans Flex", serif;
     font-size: 1rem;
-    color: var(--lavender-deep);
+    color: var(--red-deep);
 }
 
 .feature-text span {
+    font-family: "Google Sans Flex", serif;
     font-size: 0.85rem;
-    color: var(--text-secondary);
+    color: var(--text-secondary-on-white);
 }
 
 /* Feature highlight style */

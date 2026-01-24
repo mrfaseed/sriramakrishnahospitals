@@ -8,6 +8,8 @@ import "../components/Services.css";
 import "../components/ServiceDetails.css";
 import "../components/Gallery.css";
 import Nav from "../components/Nav";
+import Footer from "../components/Footer";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,7 +43,9 @@ export default function RootLayout({ children }) {
       <body className={`${geistSans.variable} ${geistMono.variable} ${openSans.variable}`}>
         <Nav />
         {children}
+        <Footer />
       </body>
+      {/* Force Refresh */}
     </html>
   );
 }
