@@ -157,16 +157,17 @@
 .logo-mark {
     width: 44px;
     height: 44px;
-    background: linear-gradient(135deg, #C41E3A 0%, #9B1B30 100%);
+    background: #ffffff;
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
+    color: #C41E3A;
     font-weight: 800;
     font-size: 1rem;
     letter-spacing: -0.02em;
-    box-shadow: 0 2px 8px rgba(196, 30, 58, 0.3);
+    box-shadow: 0 2px 8px rgba(196, 30, 58, 0.15);
+    border: 1px solid rgba(196, 30, 58, 0.1);
 }
 
 .logo-text {
@@ -506,9 +507,9 @@
     }
 
     .mobile-menu-header .logo-mark {
-        background: rgba(255, 255, 255, 0.2);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        color: #ffffff;
+        background: #ffffff;
+        border: none;
+        color: #C41E3A;
         width: 36px;
         height: 36px;
         font-size: 0.85rem;
