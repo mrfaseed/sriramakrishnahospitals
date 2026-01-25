@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { MapPin, Mail, Phone } from "lucide-react";
 import "./Footer.css";
 
 const Footer = () => {
@@ -77,9 +78,18 @@ const Footer = () => {
 
                 <div className="footer-section contact">
                     <h3>Contact Us</h3>
-                    <p>123 Wellness Avenue,<br />Healthy City, HC 54321</p>
-                    <p>Email: info@srhospitals.com</p>
-                    <p>Phone: +91 98765 43210</p>
+                    <div className="contact-item">
+                        <MapPin className="contact-icon" size={24} />
+                        <p>123 Wellness Avenue,<br />Healthy City, HC 54321</p>
+                    </div>
+                    <div className="contact-item">
+                        <Mail className="contact-icon" size={20} />
+                        <p>Email: info@srhospitals.com</p>
+                    </div>
+                    <div className="contact-item">
+                        <Phone className="contact-icon" size={20} />
+                        <p>Phone: +91 98765 43210</p>
+                    </div>
                 </div>
             </div>
 

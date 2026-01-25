@@ -215,7 +215,8 @@
 }
 
 .nav-links>li>a,
-.dropdown-trigger {
+.dropdown-trigger,
+.nav-link-btn {
     font-family: "Google Sans Flex", sans-serif;
     display: flex;
     align-items: center;
@@ -234,6 +235,7 @@
 
 .nav-links>li>a:hover,
 .dropdown-trigger:hover,
+.nav-link-btn:hover,
 .nav-links>li>a.active {
     color: #C41E3A;
     background: rgba(196, 30, 58, 0.06);
@@ -391,7 +393,8 @@
     }
 
     .nav-links>li>a,
-    .dropdown-trigger {
+    .dropdown-trigger,
+    .nav-link-btn {
         padding: 0.5rem 0.625rem;
         font-size: 0.875rem;
     }
@@ -553,7 +556,8 @@
     }
 
     .nav-links>li>a,
-    .dropdown-trigger {
+    .dropdown-trigger,
+    .nav-link-btn {
         width: 100%;
         padding: 1rem 1rem;
         font-size: 1.0625rem;
@@ -564,7 +568,8 @@
     }
 
     .nav-links>li>a:hover,
-    .dropdown-trigger:hover {
+    .dropdown-trigger:hover,
+    .nav-link-btn:hover {
         background: rgba(196, 30, 58, 0.08);
         color: #C41E3A;
     }

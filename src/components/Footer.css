@@ -286,10 +286,24 @@
     transform: translateX(5px);
 }
 
-/* Contact Text */
+/* Contact Text and Icons */
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.contact-icon {
+    color: #ff8a80;
+    flex-shrink: 0;
+    margin-top: 4px;
+    /* visually align with text */
+}
+
 .footer-section.contact p {
     color: rgba(255, 255, 255, 0.85);
-    margin-bottom: 0.8rem;
+    margin: 0;
     line-height: 1.6;
 }
 

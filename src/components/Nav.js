@@ -136,30 +136,9 @@ export default function Nav() {
               <li><Link href="/about" onClick={closeMenu}>About Us</Link></li>
               <li><Link href="/service" onClick={closeMenu}>Services</Link></li>
               <li><Link href="/doctors" onClick={closeMenu}>Doctors</Link></li>
-              <li><Link href="/facilities" onClick={closeMenu}>Facilities</Link></li>
-              <li
-                className="dropdown"
-                onMouseEnter={() => setIsGalleryOpen(true)}
-                onMouseLeave={() => setIsGalleryOpen(false)}
-              >
-                <button
-                  className="dropdown-trigger"
-                  onClick={() => setIsGalleryOpen(!isGalleryOpen)}
-                  aria-expanded={isGalleryOpen}
-                >
-                  <span>Gallery</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" width="12" height="12" className={`dropdown-icon ${isGalleryOpen ? 'open' : ''}`}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                  </svg>
-                </button>
-                <ul className={`dropdown-menu ${isGalleryOpen ? 'show' : ''}`}>
-                  <li><Link href="/gallery/main" onClick={closeMenu}>Main Hospital Gallery</Link></li>
-                  <li><Link href="/gallery/speciality" onClick={closeMenu}>Speciality Clinic</Link></li>
-                  <li><Link href="/gallery/porur" onClick={closeMenu}>Porur Clinic</Link></li>
-                  <li><Link href="/gallery/rama" onClick={closeMenu}>Rama Rau Gallery</Link></li>
-                </ul>
-              </li>
-              <li><Link href="/branches" onClick={closeMenu}>Branches</Link></li>
+
+              <li><Link href="/gallery" onClick={closeMenu}>Gallery</Link></li>
+              <li><Link href="/schemes" onClick={closeMenu}>Schemes</Link></li>
             </ul>
 
             {/* Mobile Contact Info */}

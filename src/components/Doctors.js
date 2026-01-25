@@ -15,21 +15,21 @@ const Doctors = () => {
             id: 2,
             name: "Dr. Person 2",
             role: "Chief Surgeon",
-            department: "Neurology",
+            department: "Cardiology",
             qualification: "MBBS, MS, MCh"
         },
         {
             id: 3,
             name: "Dr. Person 3",
             role: "Head of Department",
-            department: "Orthopedics",
+            department: "Cardiology",
             qualification: "MBBS, MS, DNB"
         },
         {
             id: 4,
             name: "Dr. Person 4",
-            role: "Consultant",
-            department: "Pediatrics",
+            role: "Cardiology",
+            department: "Cardiology",
             qualification: "MBBS, MD"
         },
     ];
