@@ -76,6 +76,54 @@ export default function ServiceDetails() {
                     </div>
                 </section>
 
+                {/* Emergency Care Section */}
+                <section id="emergency" className='detail-section'>
+                    <div className='detail-text'>
+                        <h2>Emergency Care</h2>
+                        <p>
+                            Our 24/7 Emergency Department is staffed by a multidisciplinary team of specialists trained to handle medical, surgical, and cardiac emergencies with speed and precision.
+                        </p>
+                        <ul className='feature-list'>
+                            <li>Round-the-clock fully equipped ambulance service</li>
+                            <li>Advanced life support systems</li>
+                            <li>Immediate triage and stabilization</li>
+                            <li>Dedicated trauma and cardiac emergency protocols</li>
+                        </ul>
+                    </div>
+                </section>
+
+                {/* Diagnostics Section */}
+                <section id="diagnostics" className='detail-section'>
+                    <div className='detail-text'>
+                        <h2>Advanced Diagnostics</h2>
+                        <p>
+                            Accurate diagnosis is the first step to effective treatment. Our diagnostic center is equipped with cutting-edge technology to provide precise and timely results.
+                        </p>
+                        <ul className='feature-list'>
+                            <li>Full-service Clinical Laboratory (Biochemistry, Pathology, Microbiology)</li>
+                            <li>Digital X-Ray and Imaging</li>
+                            <li>Computerized ECG and Treadmill Test (TMT)</li>
+                            <li>Pulmonary Function Test (PFT)</li>
+                        </ul>
+                    </div>
+                </section>
+
+                {/* Health Checkup Section */}
+                <section id="health-checkup" className='detail-section'>
+                    <div className='detail-text'>
+                        <h2>Master Health Checkup</h2>
+                        <p>
+                            Prevention is better than cure. Our Master Health Checkup packages are designed to screen for lifestyle diseases and detect potential health issues at an early stage.
+                        </p>
+                        <ul className='feature-list'>
+                            <li>Comprehensive Physical Examination</li>
+                            <li>Cardiac Screening (ECG, ECHO, Lipid Profile)</li>
+                            <li>Diabetes Screening (HbA1c, Blood Sugar)</li>
+                            <li>Kidney and Liver Function Tests</li>
+                        </ul>
+                    </div>
+                </section>
+
             </div>
         </div>
     );

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import './Home.css';
 
 // SVG Icons
+// SVG Icons
 const ArrowRightIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M5 12h14" />
@@ -12,36 +13,80 @@ const ArrowRightIcon = () => (
   </svg>
 );
 
-const HeartPulseIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-    <path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27" />
-  </svg>
-);
-
-const StethoscopeIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3" />
-    <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4" />
-    <circle cx="20" cy="10" r="2" />
-  </svg>
-);
-
-const EmergencyIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-2.24-4.286-3.5-6.43a2.497 2.497 0 0 0-4 0c-1.26 2.144-2.428 4.287-3.5 6.43-.5 1-1 1.62-1 3a2.5 2.5 0 0 0 2.5 2.5c.91 0 1.7-.58 2.16-1.36a2.496 2.496 0 0 0 4.68 0A2.498 2.498 0 0 0 8.5 14.5z" />
-    <path d="M12 8h8" />
-    <path d="M16 4v8" />
-  </svg>
-);
-
-const KidneyIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M12 21c-4.97 0-9-4.03-9-9s4.03-9 9-9c2.39 0 4.68.94 6.36 2.64" />
-    <path d="M12 3a9 9 0 0 1 9 9c0 2.39-.94 4.68-2.64 6.36" />
-    <circle cx="12" cy="12" r="3" />
-  </svg>
-);
+const services = [
+  {
+    id: 'angiogram',
+    title: 'Angiogram',
+    description: 'A diagnostic imaging test that uses X-rays to view your heart\'s blood vessels and chambers.',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M12 6v6l4 2" />
+      </svg>
+    ),
+    category: 'diagnostic',
+    hasPage: true
+  },
+  {
+    id: 'angioplasty',
+    title: 'Angioplasty',
+    description: 'A procedure to open blocked or narrowed coronary arteries using a balloon catheter and stent.',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+      </svg>
+    ),
+    category: 'interventional'
+  },
+  {
+    id: 'congenital-heart',
+    title: 'Surgery for Congenital Heart Defects',
+    subtitle: 'ASD / VSD Closure',
+    description: 'Surgical correction of heart defects present from birth, including hole-in-heart repairs.',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+      </svg>
+    ),
+    category: 'surgery'
+  },
+  {
+    id: 'balloon-valvuloplasty',
+    title: 'Balloon Valvuloplasty',
+    subtitle: 'PTMC – Valve Opening Procedure',
+    description: 'A minimally invasive procedure to open narrowed heart valves using a balloon catheter.',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <circle cx="12" cy="12" r="3" />
+        <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
+      </svg>
+    ),
+    category: 'interventional'
+  },
+  {
+    id: 'pacemaker',
+    title: 'Pacemaker Implantation Surgery',
+    description: 'Implantation of a small device that helps regulate abnormal heart rhythms.',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+      </svg>
+    ),
+    category: 'surgery'
+  },
+  {
+    id: 'holter-monitoring',
+    title: '24-Hour Holter Monitoring',
+    subtitle: 'Continuous Heart Rhythm Recording',
+    description: 'Continuous ECG monitoring for 24-48 hours to detect irregular heartbeats and arrhythmias.',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+      </svg>
+    ),
+    category: 'diagnostic'
+  }
+];
 
 const carouselImages = [
   { src: '/5U1A4804.JPG', alt: 'Sri Ramakrishna Hospitals - Reception Area' },
@@ -241,82 +286,27 @@ export default function Home() {
         </div>
 
         <div className='services-grid'>
-          {/* Service 1: General Medicine */}
-          <div className='service-preview-card'>
-            <div className='service-icon-box'>
-              <StethoscopeIcon />
+          {services.slice(0, 6).map((service) => (
+            <div key={service.id} className='service-preview-card'>
+              <div className='service-icon-box'>
+                {service.icon}
+              </div>
+              <h3>{service.title}</h3>
+              {service.subtitle && (
+                <span style={{ display: 'block', fontSize: '0.85rem', color: '#666', marginBottom: '8px', fontWeight: '500' }}>
+                  {service.subtitle}
+                </span>
+              )}
+              <p>{service.description}</p>
+              <Link href="/service" className='service-link'>
+                Learn more
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </Link>
             </div>
-            <h3>General Medicine</h3>
-            <p>Comprehensive healthcare focusing on diagnosis, treatment, and prevention of diseases for overall well-being.</p>
-            <Link href="/service/details" className='service-link'>
-              Learn more <ArrowRightIcon />
-            </Link>
-          </div>
-
-          {/* Service 2: Emergency Care */}
-          <div className='service-preview-card'>
-            <div className='service-icon-box'>
-              <EmergencyIcon />
-            </div>
-            <h3>Emergency Care</h3>
-            <p>24/7 rapid response emergency department equipped to handle all medical and cardiac crises.</p>
-            <Link href="/service/details" className='service-link'>
-              Learn more <ArrowRightIcon />
-            </Link>
-          </div>
-
-          {/* Service 3: Interventional Cardiology */}
-          <div className='service-preview-card'>
-            <div className='service-icon-box'>
-              <HeartPulseIcon />
-            </div>
-            <h3>Interventional Cardiology</h3>
-            <p>Advanced cardiac interventions including Angioplasty, Stenting, and Pacemaker implantation in our Cath Lab.</p>
-            <Link href="/service/details" className='service-link'>
-              Learn more <ArrowRightIcon />
-            </Link>
-          </div>
-
-          {/* Service 4: Nephrology */}
-          <div className='service-preview-card'>
-            <div className='service-icon-box'>
-              <KidneyIcon />
-            </div>
-            <h3>Nephrology & Dialysis</h3>
-            <p>Expert care for kidney diseases with modern, hygienic, and well-monitored dialysis facilities.</p>
-            <Link href="/service/details" className='service-link'>
-              Learn more <ArrowRightIcon />
-            </Link>
-          </div>
-
-          {/* Service 5: Diagnostics */}
-          <div className='service-preview-card'>
-            <div className='service-icon-box'>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-              </svg>
-            </div>
-            <h3>Diagnostics</h3>
-            <p>State-of-the-art diagnostic facilities including ECG, ECHO, TMT, and fully automated laboratory services.</p>
-            <Link href="/service/details" className='service-link'>
-              Learn more <ArrowRightIcon />
-            </Link>
-          </div>
-
-          {/* Service 6: Master Health Checkup */}
-          <div className='service-preview-card'>
-            <div className='service-icon-box'>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                <path d="m9 12 2 2 4-4" />
-              </svg>
-            </div>
-            <h3>Master Health Checkup</h3>
-            <p>Comprehensive health screening packages designed to detect health issues early and promote longevity.</p>
-            <Link href="/service/details" className='service-link'>
-              Learn more <ArrowRightIcon />
-            </Link>
-          </div>
+          ))}
         </div>
 
         <div style={{ textAlign: 'center', marginTop: '3rem' }}>
