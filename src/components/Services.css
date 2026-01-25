@@ -1,207 +1,260 @@
-﻿/* Scoped variables for Services page matching About Us design */
+﻿/* Services.css - Reimagined Design */
 :root {
+    --primary-red: #D32F2F;
+    --deep-red: #8b0000;
+    --light-bg: #F8F9FA;
     --white: #ffffff;
-    --red-light: #ffebee;
-    --red-medium: #ffcdd2;
-    --red-deep: #8E2B2B;
-    --red-darker: #5e1b1b;
-    --primary-main: #D32F2F;
-    --primary-dark: #B71C1C;
-    --text-primary: #ffffff;
-    --text-on-white: #333333;
-    --text-secondary-on-white: #555555;
+    --text-dark: #1a1a1a;
+    --text-light: #f5f5f5;
+    --text-muted: #666666;
 
-    --glass-bg: #ffffff;
-    --glass-border: rgba(255, 255, 255, 1);
-    --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.2);
-    --shadow-hover: 0 20px 50px rgba(0, 0, 0, 0.3);
-    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --card-shadow-hover: 0 20px 40px rgba(211, 47, 47, 0.15);
 }
 
 .services-app-container {
-    font-family: "Google Sans Flex", serif;
-    /* Red Themed Background (Matching About Us) */
-    background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
-    color: var(--text-primary);
-    overflow-x: hidden;
-    width: 100%;
+    background-color: var(--light-bg);
     min-height: 100vh;
+    font-family: "Google Sans Flex", sans-serif;
+    color: var(--text-dark);
+    padding-bottom: 5rem;
 }
 
-/* --- Hero --- */
+/* --- Hero Section --- */
 .services-hero {
-    min-height: 50vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    /* Matching About Us Hero Background */
-    background: radial-gradient(circle at top right, rgba(211, 47, 47, 0.911) 0%, transparent 1000%);
-    padding: 6rem 2rem 4rem;
+    background: radial-gradient(circle at center, #D32F2F 0%, #8b0000 100%);
     position: relative;
+    overflow: hidden;
+    margin-bottom: -5rem;
+    /* Overlap effect */
+    padding-bottom: 5rem;
+}
+
+.services-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.services-hero-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    padding: 0 2rem;
 }
 
 .services-title {
     font-family: "momo trust display", sans-serif;
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     font-weight: 800;
     color: var(--white);
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.02em;
-    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 0;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.text-highlight {
+.services-title .text-highlight {
     color: #ffffff;
+    /* Soft pinkish red */
 }
 
 .services-subtitle {
-    font-family: "Google Sans Flex", serif;
+    font-family: "Google Sans Flex", sans-serif;
     font-size: 1.25rem;
-    color: var(--red-light);
-    font-weight: 500;
-    max-width: 700px;
-    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 1rem;
+    font-weight: 400;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* --- Service List --- */
+/* --- Services Grid --- */
 .services-list-section {
-    padding: 4rem 10%;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: #ffffff;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    position: relative;
+    z-index: 10;
 }
 
 .service-card {
-    background: #ffffff;
-    /* White cards */
-    border-radius: 20px;
+    background: var(--white);
+    border-radius: 24px;
     padding: 2.5rem;
-    padding-bottom: 5rem;
-    /* Space for the button */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    border-top: 5px solid #D32F2F;
-    /* Red top border */
+    box-shadow: var(--card-shadow);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0, 0, 0, 0.03);
     display: flex;
-    align-items: flex-start;
-    gap: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
     position: relative;
-    /* For button positioning */
-    transition: var(--transition);
-    color: var(--text-on-white);
+    overflow: hidden;
+    border-color: rgba(211, 47, 47, 0.2);
 }
 
 .service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    transform: translateY(-10px);
+    box-shadow: var(--card-shadow-hover);
 }
 
-/* .view-more-btn styling - absolute positioning */
-.view-more-btn {
-    position: absolute;
-    bottom: 2rem;
-    right: 2rem;
-    display: inline-block;
-    padding: 0.8rem 2rem;
-    background: linear-gradient(135deg, #D32F2F 0%, #8E2B2B 100%);
-    /* Red Gradient Button */
-    color: var(--white);
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
-    z-index: 2;
+/* Wide Card for Important Services */
+.card-wide {
+    grid-column: span 2;
 }
 
-.view-more-btn:hover {
-    background: linear-gradient(135deg, #8E2B2B 0%, #5e1b1b 100%);
-    transform: scale(1.05);
-    color: #ffffff;
+@media (max-width: 900px) {
+    .card-wide {
+        grid-column: span 1;
+    }
 }
 
-.service-icon {
-    font-size: 3rem;
-    background: var(--red-light);
-    width: 80px;
-    height: 80px;
+.card-header {
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    flex-shrink: 0;
-}
-
-.service-info h3 {
-    font-family: "Google Sans Flex", serif;
-    font-size: 1.75rem;
-    color: var(--red-deep);
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
-
-.service-info p {
-    font-family: "Google Sans Flex", serif;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: var(--text-secondary-on-white);
+    gap: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
-/* --- Sub Features (Cardiology) --- */
-.sub-features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-    background: var(--red-light);
-    padding: 1.5rem;
-    border-radius: 15px;
-}
-
-.sub-feature {
+.service-icon {
+    font-size: 2.5rem;
+    width: 70px;
+    height: 70px;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    justify-content: center;
+    background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+    border-radius: 20px;
+    color: var(--primary-red);
+    box-shadow: 0 8px 16px rgba(211, 47, 47, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.feature-icon {
-    font-size: 1.5rem;
-    color: var(--primary-main);
+.service-card:hover .service-icon {
+    transform: rotate(5deg) scale(1.1);
 }
 
-.feature-text {
+.card-header h3 {
+    font-family: "Google Sans Flex", sans-serif;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.service-body {
+    flex-grow: 1;
+}
+
+.service-body p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+/* Tags & Features */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.tag {
+    background: #f1f3f5;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #555;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.service-card:hover .tag {
+    background: #ffebee;
+    color: var(--primary-red);
+    border-color: #ffcdd2;
+}
+
+.grid-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.feature-item {
     display: flex;
     flex-direction: column;
 }
 
-.feature-text strong {
-    font-family: "Google Sans Flex", serif;
+.feature-item strong {
+    color: var(--primary-red);
     font-size: 1rem;
-    color: var(--red-deep);
+    margin-bottom: 0.2rem;
 }
 
-.feature-text span {
-    font-family: "Google Sans Flex", serif;
+.feature-item span {
     font-size: 0.85rem;
-    color: var(--text-secondary-on-white);
+    color: #888;
 }
 
-/* Feature highlight style */
-.featured-card {
-    border-left: 5px solid var(--primary-main);
+.mini-divider {
+    height: 1px;
+    background: #eee;
+    margin: 1.5rem 0;
+    width: 100%;
+}
+
+/* Button */
+.view-more-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 0.8rem 1.5rem;
+    background: transparent;
+    border: 2px solid #d32f2f88;
+    color: var(--primary-red);
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.view-more-btn:hover {
+    border: 2px solid #D32F2F;
+    color: var(--white);
+    background-color: #D32F2F;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(211, 47, 47, 0.3);
 }
 
 /* Animations */
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
 
     to {
@@ -210,24 +263,37 @@
     }
 }
 
-.fade-in-up {
-    animation: fadeInUp 0.8s ease-out forwards;
-}
-
-/* Responsive */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
-    .service-card {
+    .services-title {
+        font-size: 3rem;
+    }
+
+    .services-hero {
+        height: auto;
+        padding: 6rem 1rem;
+    }
+
+    .services-list-section {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        margin-top: 0;
+    }
+
+    .card-header {
         flex-direction: column;
-        align-items: center;
         text-align: center;
     }
 
-    .sub-features-grid {
-        grid-template-columns: 1fr;
-        text-align: left;
+    .service-card {
+        text-align: center;
     }
 
-    .services-title {
-        font-size: 2.5rem;
+    .view-more-btn {
+        width: 100%;
+    }
+
+    .grid-features {
+        text-align: left;
     }
 }

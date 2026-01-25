@@ -17,109 +17,77 @@ export default function Services() {
 
         {/* General Medicine Card */}
         <div className='service-card'>
-          <div className='service-icon'>🩺</div>
-          <div className='service-info'>
+          <div className='card-header'>
+            <div className='service-icon'>🩺</div>
             <h3>General Medicine</h3>
+          </div>
+          <div className='service-body'>
             <p>Comprehensive healthcare for adults, focusing on the diagnosis, treatment, and prevention of a wide variety of diseases. Our expert physicians provide holistic care for your overall well-being.</p>
-            <a href="/service/details" className='view-more-btn'>View More &rarr;</a>
           </div>
+          <a href="/service/details" className='view-more-btn'>Explore Service</a>
         </div>
 
-        {/* Emergency Care Card (New) */}
+        {/* Emergency Care Card */}
         <div className='service-card'>
-          <div className='service-icon'>🚑</div>
-          <div className='service-info'>
+          <div className='card-header'>
+            <div className='service-icon'>🚑</div>
             <h3>Emergency Care</h3>
-            <p>Our emergency department operates 24/7, fully equipped to handle all medical and cardiac emergencies with speed, precision, and compassion.</p>
-            <div className='sub-features-grid'>
-              <div className='sub-feature'>
-                <span className='feature-icon'>🕒</span>
-                <div className='feature-text'>
-                  <strong>24/7 Availability</strong>
-                </div>
-              </div>
-              <div className='sub-feature'>
-                <span className='feature-icon'>⚡</span>
-                <div className='feature-text'>
-                  <strong>Rapid Response</strong>
-                </div>
-              </div>
-            </div>
-            <a href="/service/details" className='view-more-btn'>View More &rarr;</a>
           </div>
+          <div className='service-body'>
+            <p>Our emergency department operates 24/7, fully equipped to handle all medical and cardiac emergencies with speed.</p>
+            <div className='tags-container'>
+              <span className='tag'>24/7 Availability</span>
+              <span className='tag'>Rapid Response</span>
+            </div>
+          </div>
+          <a href="/service/details" className='view-more-btn'>Explore Service</a>
         </div>
 
-        {/* Intervention Cardiology Card */}
-        <div className='service-card featured-card'>
-          <div className='service-icon'>❤️</div>
-          <div className='service-info'>
+        {/* Intervention Cardiology Card - WIDE */}
+        <div className='service-card card-wide'>
+          <div className='card-header'>
+            <div className='service-icon'>❤️</div>
             <h3>Intervention Cardiology</h3>
-            <p>State-of-the-art cardiac care with advanced intervention capabilities performed in our fully equipped Cath Lab.</p>
-
-            <div className='sub-features-grid'>
-              <div className='sub-feature'>
-                <span className='feature-icon'>🏥</span>
-                <div className='feature-text'>
-                  <strong>Cath Lab</strong>
-                  <span>Coronary Angiogram, Angioplasty, PTCA, PCI</span>
-                </div>
-              </div>
-
-              <div className='sub-feature'>
-                <span className='feature-icon'>💓</span>
-                <div className='feature-text'>
-                  <strong>Device Closure</strong>
-                  <span>ASD and VSD Procedures</span>
-                </div>
-              </div>
-
-              <div className='sub-feature'>
-                <span className='feature-icon'>🔋</span>
-                <div className='feature-text'>
-                  <strong>PPI</strong>
-                  <span>Permanent Pacemaker Implantation</span>
-                </div>
-              </div>
-
-              <div className='sub-feature'>
-                <span className='feature-icon'>⚡</span>
-                <div className='feature-text'>
-                  <strong>EECP</strong>
-                  <span>Non-Invasive Cardiac Therapy</span>
-                </div>
-              </div>
-            </div>
-
-            <h4 style={{ marginTop: '1.5rem', marginBottom: '1rem', color: '#555' }}>Diagnostic Services</h4>
-            <div className='sub-features-grid'>
-              <div className='sub-feature'>
-                <span className='feature-icon'>📈</span>
-                <div className='feature-text'>
-                  <strong>ECG & ECHO</strong>
-                </div>
-              </div>
-              <div className='sub-feature'>
-                <span className='feature-icon'>🏃</span>
-                <div className='feature-text'>
-                  <strong>TMT</strong>
-                  <span>Treadmill Test</span>
-                </div>
-              </div>
-            </div>
-
-            <a href="/service/details" className='view-more-btn'>View More &rarr;</a>
-
           </div>
+          <div className='service-body'>
+            <p>State-of-the-art cardiac care with advanced intervention capabilities in our Cath Lab.</p>
+
+            <div className='grid-features'>
+              <div className='feature-item'>
+                <strong>Cath Lab</strong>
+                <span>Coronary Angiogram, Angioplasty</span>
+              </div>
+              <div className='feature-item'>
+                <strong>Device Closure</strong>
+                <span>ASD and VSD Procedures</span>
+              </div>
+              <div className='feature-item'>
+                <strong>PPI</strong>
+                <span>Permanent Pacemaker</span>
+              </div>
+              <div className='feature-item'>
+                <strong>EECP</strong>
+                <span>Non-Invasive Therapy</span>
+              </div>
+            </div>
+            <div className='mini-divider'></div>
+            <div className='grid-features'>
+              <div className='feature-item'><strong>Diagnostic:</strong> ECG, ECHO, TMT</div>
+            </div>
+          </div>
+          <a href="/service/details" className='view-more-btn'>Explore Service</a>
         </div>
 
         {/* Dialysis Card */}
         <div className='service-card'>
-          <div className='service-icon'>💧</div>
-          <div className='service-info'>
-            <h3>Advanced Nephrology & Dialysis</h3>
-            <p>Specialized care for kidney diseases with a dedicated focus on safe, hygienic, and well-monitored dialysis treatments using modern equipment.</p>
-            <a href="/service/details" className='view-more-btn'>View More &rarr;</a>
+          <div className='card-header'>
+            <div className='service-icon'>💧</div>
+            <h3>Nephrology & Dialysis</h3>
           </div>
+          <div className='service-body'>
+            <p>Specialized care for kidney diseases with a focus on safe, hygienic, and well-monitored dialysis treatments.</p>
+          </div>
+          <a href="/service/details" className='view-more-btn'>Explore Service</a>
         </div>
 
       </section>
