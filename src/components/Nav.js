@@ -166,16 +166,15 @@ export default function Nav() {
             </Link>
           </div>
 
-          {/* Hamburger Menu Button - Simple, no animation */}
+          {/* Hamburger Menu Button - Static SVG icon, no animation */}
           <button
             className="hamburger"
             onClick={() => setIsMobileMenuOpen(true)}
             aria-label="Open menu"
-            aria-expanded={isMobileMenuOpen}
           >
-            <span className="bar"></span>
-            <span className="bar"></span>
-            <span className="bar"></span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" width="24" height="24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
           </button>
         </div>
       </nav>
