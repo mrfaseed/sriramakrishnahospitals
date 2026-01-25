@@ -1,0 +1,320 @@
+/* =========================================
+   DOCTORS PAGE - ELEGANT PROFESSIONAL
+   Clean, Minimalist, High-Trust Design
+   ========================================= */
+
+:root {
+    --primary-red: #c41e3a;
+    --primary-dark: #1a1a1a;
+    --text-gray: #555555;
+    --light-gray: #f8f9fa;
+    --border-color: #eaeaea;
+    --gold-accent: #ffd700;
+}
+
+.doctors-page-elegant {
+    background-color: #ffffff;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--primary-dark);
+}
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+.elegant-hero {
+    padding: 120px 24px 80px;
+    background: linear-gradient(180deg, #fffcfc 0%, #ffffff 100%);
+    text-align: center;
+    position: relative;
+}
+
+.elegant-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-red), var(--gold-accent));
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.subtitle {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--primary-red);
+    margin-bottom: 16px;
+    position: relative;
+    display: inline-block;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    margin-bottom: 24px;
+    font-family: "Google Sans Flex", serif;
+    /* Keeping branding font */
+    background: linear-gradient(45deg, #1a1a1a, #4a4a4a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    line-height: 1.7;
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   GRID SECTION
+   ========================================= */
+.team-section {
+    padding: 0 24px 100px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.doctor-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* =========================================
+   PROFESSIONAL CARD DESIGN
+   ========================================= */
+.pro-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.pro-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: transparent;
+}
+
+/* Image Area */
+.image-container {
+    width: 100%;
+    aspect-ratio: 3/4;
+    /* Portrait Ratio */
+    background-color: var(--light-gray);
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.placeholder-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #cbd5e0;
+    transition: all 0.5s ease;
+}
+
+.placeholder-image svg {
+    margin-bottom: 12px;
+}
+
+.upload-text {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.pro-card:hover .placeholder-image {
+    background-color: #fafafa;
+    transform: scale(1.05);
+    color: var(--primary-red);
+}
+
+/* Info Area */
+.info-container {
+    padding: 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.department-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--primary-red);
+    background: rgba(196, 30, 58, 0.05);
+    padding: 6px 12px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+
+.doctor-name {
+    font-family: "Google Sans Flex", serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.doctor-details {
+    margin-bottom: 24px;
+}
+
+.role {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--primary-dark);
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.qualification {
+    display: block;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* Button */
+.book-btn {
+    margin-top: auto;
+    background: transparent;
+    border: none;
+    padding: 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.book-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.pro-card:hover .book-btn {
+    color: var(--primary-red);
+}
+
+.pro-card:hover .book-btn svg {
+    transform: translateX(4px);
+}
+
+/* =========================================
+   TRUST SECTION
+   ========================================= */
+.trust-section {
+    padding: 60px 0 100px;
+    border-top: 1px solid var(--border-color);
+}
+
+.trust-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.trust-item {
+    text-align: center;
+}
+
+.trust-item .number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    font-family: "Google Sans Flex", serif;
+    margin-bottom: 8px;
+}
+
+.trust-item .label {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.separator {
+    width: 1px;
+    height: 40px;
+    background-color: var(--border-color);
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+@media (max-width: 1200px) {
+    .doctor-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .elegant-hero {
+        padding: 80px 20px 60px;
+    }
+
+    .title {
+        font-size: 2.8rem;
+    }
+
+    .trust-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .separator {
+        width: 40px;
+        height: 1px;
+    }
+}
+
+@media (max-width: 480px) {
+    .doctor-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .info-container {
+        padding: 20px;
+    }
+}

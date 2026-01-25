@@ -24,7 +24,17 @@
     width: 200px;
     height: 200px;
     color: #fff;
-    transform: rotate(15deg);
+    animation: smoothRotate 20s linear infinite;
+}
+
+@keyframes smoothRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .effect-2 {
