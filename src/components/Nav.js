@@ -6,12 +6,20 @@ export default function Nav() {
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
-  // Handle scroll effect for navbar
+  // Handle scroll effect for navbar and progress bar
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      const totalScroll = document.documentElement.scrollTop;
+      const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scroll = `${totalScroll / windowHeight}`;
+      const scrolled = window.scrollY > 10;
+
+      setIsScrolled(scrolled);
+      setScrollProgress(Number(scroll));
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -44,6 +52,13 @@ export default function Nav() {
 
   return (
     <header className={`header-container ${isScrolled ? 'scrolled' : ''}`}>
+      {/* Scroll Progress Bar */}
+      <div className="scroll-progress-container">
+        <div
+          className="scroll-progress-bar"
+          style={{ transform: `scaleX(${scrollProgress})` }}
+        />
+      </div>
       {/* Top Utility Bar */}
       <div className="top-bar">
         <div className="top-bar-content">

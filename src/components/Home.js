@@ -62,8 +62,7 @@ export default function Home() {
             Centre of Excellence in Cardiac Care
           </span>
           <h1 className='hero-headline'>
-            Advanced Heart Care,<br />
-            <span>Expert Cardiologists</span>
+            Advanced Heart Care, <span>Expert Cardiologists</span>
           </h1>
           <p className='hero-subtext'>
             Sri Ramakrishna Hospitals is a leading cardiac care center offering

@@ -91,6 +91,7 @@
 }
 
 .service-card {
+    font-family: "Google Sans Flex", sans-serif;
     background: var(--white);
     border-radius: 24px;
     padding: 2.5rem;
@@ -122,6 +123,7 @@
 }
 
 .card-header {
+    font-family: "Google Sans Flex", sans-serif;
     display: flex;
     align-items: center;
     gap: 1.5rem;
@@ -160,6 +162,7 @@
 }
 
 .service-body p {
+    font-family: "Google Sans Flex", sans-serif;
     font-size: 1rem;
     line-height: 1.6;
     color: var(--text-muted);
@@ -175,6 +178,7 @@
 }
 
 .tag {
+    font-family: "Google Sans Flex", sans-serif;
     background: #f1f3f5;
     padding: 0.4rem 1rem;
     border-radius: 50px;
