@@ -66,14 +66,14 @@ export default function Contact() {
                                 <div className="info-icon"><MapPinIcon /></div>
                                 <div className="info-content">
                                     <h3>Visit Us</h3>
-                                    <p>26/2F, 2G, West Pandiyan Colony,<br />Virudhunagar, Tamil Nadu 626001</p>
+                                    <p>HWWW+J8R, GT Nagar <br />Virudhunagar, Tamil Nadu 626001</p>
                                 </div>
                             </div>
                             <div className="info-row">
                                 <div className="info-icon"><PhoneIcon /></div>
                                 <div className="info-content">
                                     <h3>Call Us</h3>
-                                    <p>+91 98765 43210<br />+91 4562 123456</p>
+                                    <p>+91 1234567890<br />+91 1234567890</p>
                                 </div>
                             </div>
                             <div className="info-row">
@@ -102,20 +102,20 @@ export default function Contact() {
                                 <div className="form-row">
                                     <div className="form-group">
                                         <label>First Name</label>
-                                        <input type="text" placeholder="John" />
+                                        <input type="text" placeholder="Enter your first name" />
                                     </div>
                                     <div className="form-group">
                                         <label>Last Name</label>
-                                        <input type="text" placeholder="Doe" />
+                                        <input type="text" placeholder="Enter your last name" />
                                     </div>
                                 </div>
                                 <div className="form-group">
                                     <label>Email Address</label>
-                                    <input type="email" placeholder="john@example.com" />
+                                    <input type="email" placeholder="Enter your email address" />
                                 </div>
                                 <div className="form-group">
                                     <label>Phone Number</label>
-                                    <input type="tel" placeholder="+91 98765 43210" />
+                                    <input type="tel" placeholder="+91 1234567890" />
                                 </div>
                                 <div className="form-group">
                                     <label>Message</label>
@@ -133,7 +133,7 @@ export default function Contact() {
                     <div className="map-section">
                         <div className="map-frame">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3934.026362453665!2d77.9547563!3d9.5928863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0133a1e1b1b1b1%3A0x1b1b1b1b1b1b1b1b!2sVirudhunagar!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3933.918667615654!2d77.9431835!3d9.5966046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b012d00474e0ccf%3A0x46d6f77a1af478a6!2sSRI%20RAMAKRISHNA%20HOSPITAL%20HEART%20CENTRE!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
                                 width="100%"
                                 height="450"
                                 style={{ border: 0 }}

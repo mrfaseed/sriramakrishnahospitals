@@ -80,15 +80,15 @@ const Footer = () => {
                     <h3>Contact Us</h3>
                     <div className="contact-item">
                         <MapPin className="contact-icon" size={24} />
-                        <p>123 Wellness Avenue,<br />Healthy City, HC 54321</p>
+                        <p>HWWW+J8R, GT Nagar <br />Virudhunagar, Tamil Nadu 626001</p>
                     </div>
                     <div className="contact-item">
                         <Mail className="contact-icon" size={20} />
-                        <p>Email: info@srhospitals.com</p>
+                        <p>Email: info@ramakrishnahospitals.com</p>
                     </div>
                     <div className="contact-item">
                         <Phone className="contact-icon" size={20} />
-                        <p>Phone: +91 98765 43210</p>
+                        <p>Phone: +91 1234567890</p>
                     </div>
                 </div>
             </div>
