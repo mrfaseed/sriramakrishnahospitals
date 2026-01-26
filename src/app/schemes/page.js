@@ -31,13 +31,7 @@ export default function SchemesPage() {
                             <li><strong>PMJAY</strong> (Pradhan Mantri Jan Arogya Yojana)</li>
                         </ul>
 
-                        <h3>Services Covered</h3>
-                        <ul className="scheme-list-premium">
-                            <li>General Medical Treatment</li>
-                            <li>Advanced Surgical Procedures</li>
-                            <li>Diagnostic Tests & Scans</li>
-                            <li>Complete Inpatient Care</li>
-                        </ul>
+
 
                         <div className="info-highlight">
                             <h4>Important Information</h4>
@@ -59,13 +53,7 @@ export default function SchemesPage() {
                             <li><strong>பிரதம மந்திரி மக்கள் ஆரோக்கிய திட்டம்</strong> (PMJAY)</li>
                         </ul>
 
-                        <h3>திட்டத்தில் உள்ள சேவைகள்</h3>
-                        <ul className="scheme-list-premium">
-                            <li>பொது மருத்துவ சிகிச்சை</li>
-                            <li>அறுவை சிகிச்சைகள்</li>
-                            <li>பரிசோதனைகள் (Scans & Tests)</li>
-                            <li>உள்நோயாளி மருத்துவ சேவைகள்</li>
-                        </ul>
+
 
                         <div className="info-highlight" style={{ backgroundColor: '#fef2f2', borderColor: '#fee2e2' }}>
                             <h4 style={{ color: '#991b1b' }}>முக்கிய அறிவிப்பு</h4>

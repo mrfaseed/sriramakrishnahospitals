@@ -1,11 +1,22 @@
-﻿/* Main Container */
+﻿/* Global Box Sizing Reset for this component's scope (if not applied globally) */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Main Container */
 .gallery-container {
     min-height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    /* Changed from 100vw to 100% to avoid scrollbar width issues */
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     padding: 4rem 2rem;
     position: relative;
     overflow-x: hidden;
     font-family: 'Inter', sans-serif;
+    margin: 0;
 }
 
 /* Background Hearts */
@@ -59,12 +70,12 @@
 }
 
 .gallery-title {
+    font-family: "momo trust display", sans-serif;
     font-size: 3.5rem;
     font-weight: 800;
     color: #2d3436;
     margin-bottom: 0.5rem;
     letter-spacing: -1px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .heart-text {
@@ -76,6 +87,7 @@
 }
 
 .gallery-subtitle {
+    font-family: "Google Sans Flex", serif;
     font-size: 1.2rem;
     color: #636e72;
     max-width: 600px;
@@ -289,13 +301,17 @@
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
+    .gallery-container {
+        padding: 4rem 1rem;
+    }
+
     .gallery-title {
         font-size: 2.5rem;
     }
 
     .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
 
     .gallery-item:nth-child(even) {
@@ -304,5 +320,17 @@
 
     .gallery-item:hover {
         transform: scale(0.98);
+    }
+
+    .heart-1 {
+        width: 150px;
+        height: 150px;
+        left: -20px;
+    }
+
+    .heart-2 {
+        width: 200px;
+        height: 200px;
+        right: -30px;
     }
 }

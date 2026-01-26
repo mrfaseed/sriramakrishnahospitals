@@ -51,17 +51,6 @@ const SchemesDetails = ({ isOpen, onClose }) => {
                                 </ul>
                             </div>
 
-                            <div className="scheme-section">
-                                <h3 className="scheme-heading">Services Covered</h3>
-                                <p>Patients enrolled in these schemes may avail:</p>
-                                <ul className="scheme-list">
-                                    <li>Medical treatment</li>
-                                    <li>Surgical procedures</li>
-                                    <li>Diagnostic tests</li>
-                                    <li>Inpatient hospital care</li>
-                                </ul>
-                            </div>
-
                             <div className="important-box">
                                 <h4 style={{ margin: '0 0 8px 0', fontSize: '1rem' }}>Important Information</h4>
                                 <p style={{ margin: 0, fontSize: '0.95rem' }}>For treatments covered under these schemes, patients are not required to make upfront payment at the hospital.</p>
@@ -79,16 +68,6 @@ const SchemesDetails = ({ isOpen, onClose }) => {
                                 </ul>
                             </div>
 
-                            <div className="scheme-section">
-                                <h3 className="scheme-heading tamil">திட்டத்தில் உள்ள சேவைகள்</h3>
-                                <p>இந்த திட்டங்களில் பதிவு செய்யப்பட்ட நோயாளிகள் பெறக்கூடியவை:</p>
-                                <ul className="scheme-list">
-                                    <li>மருத்துவ சிகிச்சை</li>
-                                    <li>அறுவை சிகிச்சை</li>
-                                    <li>பரிசோதனைகள்</li>
-                                    <li>உள்நோயாளி மருத்துவ சேவைகள்</li>
-                                </ul>
-                            </div>
 
                             <div className="important-box tamil">
                                 <h4 style={{ margin: '0 0 8px 0', fontSize: '1rem' }}>முக்கிய அறிவிப்பு</h4>

@@ -17,6 +17,7 @@ export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const openModal = (img) => {
+    if (window.innerWidth <= 768) return; // Disable popup on mobile
     setSelectedImage(img);
     document.body.style.overflow = 'hidden';
   };

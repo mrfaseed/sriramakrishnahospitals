@@ -32,6 +32,7 @@
 }
 
 .schemes-title {
+    font-family: "momo trust display", sans-serif;
     font-size: 3rem;
     /* Larger title */
     font-weight: 800;
@@ -41,7 +42,9 @@
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+
 .schemes-subtitle {
+    font-family: "Google Sans Flex", serif;
     font-size: 1.2rem;
     max-width: 700px;
     /* Wider reading area */
@@ -72,6 +75,7 @@
 }
 
 @media (min-width: 900px) {
+
     .schemes-grid {
         grid-template-columns: 1fr 1fr;
     }
@@ -97,6 +101,7 @@
 }
 
 .card-header-badge {
+    font-family: "Google Sans Flex", serif;
     display: inline-block;
     padding: 8px 20px;
     border-radius: 50px;
@@ -118,6 +123,7 @@
 }
 
 .scheme-lang-card.english h2 {
+    font-family: "Google Sans Flex", serif;
     color: #991b1b;
     font-size: 2rem;
     font-weight: 800;
@@ -127,6 +133,7 @@
 }
 
 .scheme-lang-card.english h3 {
+    font-family: "Google Sans Flex", serif;
     color: #b91c1c;
     font-size: 1.35rem;
     margin: 40px 0 20px;
@@ -209,12 +216,14 @@
 }
 
 .info-highlight h4 {
+    font-family: "Google Sans Flex", serif;
     margin: 0 0 10px 0;
     font-size: 1.15rem;
     color: #991b1b;
 }
 
 .info-highlight p {
+    font-family: "Google Sans Flex", serif;
     margin: 0;
     color: #b91c1c;
     font-size: 1rem;
@@ -244,6 +253,7 @@
 }
 
 .helpline-title {
+    font-family: "Google Sans Flex", serif;
     color: #991b1b;
     font-weight: 700;
     font-size: 1.3rem;
@@ -252,6 +262,7 @@
 }
 
 .helpline-number-box {
+    font-family: "Google Sans Flex", serif;
     background: linear-gradient(90deg, #dc2626, #b91c1c);
     /* Red gradient */
     color: white;

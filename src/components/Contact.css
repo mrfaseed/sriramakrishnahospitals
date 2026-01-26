@@ -2,12 +2,23 @@
    CONTACT PAGE - PREMIUM RED THEME
    ========================================= */
 
+/* Box Sizing Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 .contact-page {
+    width: 100%;
+    max-width: 100%;
     min-height: 100vh;
     background-color: #f9f9f9;
     color: #1a1a1a;
     font-family: 'Google Sans Flex', -apple-system, BlinkMacSystemFont, sans-serif;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 /* --- Hero Section --- */
@@ -71,8 +82,10 @@
 .hero-shape-divider svg {
     position: relative;
     display: block;
-    width: calc(100% + 1.3px);
+    width: 100%;
     height: 100px;
+    transform: scale(1.1);
+    /* Scale up to ensure no gaps without causing overflow */
 }
 
 .hero-shape-divider .shape-fill {
@@ -292,13 +305,22 @@
 }
 
 @media (max-width: 768px) {
+    .contact-grid-layout {
+        gap: 24px;
+    }
+
     .contact-hero-section {
         min-height: 40vh;
         padding-top: 100px;
+        padding-bottom: 80px;
+    }
+
+    .contact-content-section {
+        padding: 40px 16px;
     }
 
     .contact-page .hero-main-title {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
     }
 
     .form-row {
@@ -307,6 +329,20 @@
 
     .contact-form-wrapper,
     .contact-info-single-card {
-        padding: 30px;
+        padding: 20px;
+        border: none;
+        /* Remove border to avoid lines appearing as bars */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        /* Softer shadow instead */
+    }
+
+    .contact-form-wrapper h2 {
+        font-size: 1.8rem;
+    }
+
+    .info-content p {
+        word-break: break-word;
+        /* Prevent long emails from breaking layout */
+        font-size: 0.9rem;
     }
 }
