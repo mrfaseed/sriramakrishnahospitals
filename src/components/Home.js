@@ -89,13 +89,15 @@ const services = [
 ];
 
 const carouselImages = [
-  { src: '/5U1A4804.JPG', alt: 'Sri Ramakrishna Hospitals - Reception Area' },
-  { src: '/5U1A4807.JPG', alt: 'Sri Ramakrishna Hospitals - Medical Facility' },
   { src: '/5U1A4809.JPG', alt: 'Sri Ramakrishna Hospitals - Patient Care' },
+   { src: '/5U1A4804.JPG', alt: 'Sri Ramakrishna Hospitals - Reception Area' },
+  { src: '/008.JPG', alt: 'Sri Ramakrishna Hospitals - Hospital Exterior' },
+  { src: '/full_hospital_1.JPG', alt: 'Sri Ramakrishna Hospitals - Hospital Exterior' },
   { src: '/5U1A4811.JPG', alt: 'Sri Ramakrishna Hospitals - Healthcare Services' },
+  { src: '/5U1A4807.JPG', alt: 'Sri Ramakrishna Hospitals - Medical Facility' },
   { src: '/5U1A4826.JPG', alt: 'Sri Ramakrishna Hospitals - Modern Equipment' },
-  { src: '/5U1A4832.JPG', alt: 'Sri Ramakrishna Hospitals - Medical Team' },
-  { src: '/5U1A4835.JPG', alt: 'Sri Ramakrishna Hospitals - Hospital Exterior' },
+  { src: '/5U1A4832_new.JPG', alt: 'Sri Ramakrishna Hospitals - Medical Team' },
+  { src: '/5U1A4835.JPG', alt: 'Sri Ramakrishna Hospitals - Hospital Exterior' }
 ];
 
 export default function Home() {
