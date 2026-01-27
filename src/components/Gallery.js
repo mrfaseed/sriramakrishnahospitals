@@ -4,12 +4,12 @@ import Image from 'next/image';
 import './Gallery.css';
 
 const images = [
+  '/5U1A4832.JPG',
   '/5U1A4804.JPG',
   '/5U1A4807.JPG',
   '/5U1A4809.JPG',
   '/5U1A4811.JPG',
   '/5U1A4826.JPG',
-  '/5U1A4832.JPG',
   '/5U1A4835.JPG'
 ];
 

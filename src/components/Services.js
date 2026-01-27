@@ -18,7 +18,9 @@ export default function Services() {
         {/* General Medicine Card */}
         <div className='service-card'>
           <div className='card-header'>
-            <div className='service-icon'>🩺</div>
+            <div className='service-icon'>
+              <i className='fas fa-stethoscope'></i>
+            </div>
             <h3>General Medicine</h3>
           </div>
           <div className='service-body'>

@@ -62,6 +62,8 @@ const Footer = () => {
                         <li><Link href="/">Home</Link></li>
                         <li><Link href="/about">About Us</Link></li>
                         <li><Link href="/service">Services</Link></li>
+                        <li><Link href="/doctors">Doctors</Link></li>
+                        <li><Link href="/schemes">Schemes</Link></li>
                         <li><Link href="/contact">Contact</Link></li>
                     </ul>
                 </div>
@@ -70,8 +72,9 @@ const Footer = () => {
                     <h3>Our Services</h3>
                     <ul>
                         <li><Link href="/service">Cardiology</Link></li>
-                        <li><Link href="/service">Neurology</Link></li>
-                        <li><Link href="/service">Pediatrics</Link></li>
+                        <li><Link href="/service">General Medicine</Link></li>
+                        <li><Link href="/service">Interventional cardiology</Link></li>
+                        <li><Link href="/service">Nephrology (dialysis)</Link></li>
                         <li><Link href="/service">Emergency</Link></li>
                     </ul>
                 </div>

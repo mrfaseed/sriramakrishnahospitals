@@ -40,7 +40,7 @@ const services = [
   },
   {
     id: 'congenital-heart',
-    title: 'Surgery for Congenital Heart Defects',
+    title: 'Congenital Heart Defects',
     subtitle: 'ASD / VSD Closure',
     description: 'Surgical correction of heart defects present from birth, including hole-in-heart repairs.',
     icon: (

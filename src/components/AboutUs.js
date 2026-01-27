@@ -210,10 +210,11 @@ export default function AboutUs() {
                 <li>PTCA & PCI</li>
                 <li>Permanent Pacemaker Implantation (PPI)</li>
                 <li>ASD and VSD Device Closure</li>
+                <li>TPI (Temporary Pacemaker Implantation)</li>
               </ul>
               <div className='specialty-highlight'>
                 <AwardIcon />
-                First in South India to introduce EECP (Enhanced External Counterpulsation) therapy.
+                First in South tamilnadu to introduce EECP (Enhanced External Counterpulsation) therapy.
               </div>
             </div>
 
