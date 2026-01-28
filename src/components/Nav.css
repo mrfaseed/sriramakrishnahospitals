@@ -177,6 +177,24 @@
     line-height: 1;
 }
 
+.nav-logo-img {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-logo-img-mobile {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 900px) {
+    .nav-logo-img {
+        height: 45px;
+    }
+}
+
 .logo-title {
     font-family: "Google Sans Flex", sans-serif;
     font-size: 1.125rem;
@@ -498,8 +516,9 @@
         align-items: center;
         justify-content: space-between;
         padding: 1rem 1rem 1rem 1.5rem;
-        background: linear-gradient(135deg, #C41E3A 0%, #9B1B30 100%);
+        background: #ffffff;
         margin-bottom: 0.5rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     .mobile-logo {
@@ -509,25 +528,6 @@
         text-decoration: none;
     }
 
-    .mobile-menu-header .logo-mark {
-        background: #ffffff;
-        border: none;
-        color: #C41E3A;
-        width: 36px;
-        height: 36px;
-        font-size: 0.85rem;
-    }
-
-    .mobile-menu-header .logo-title {
-        color: #ffffff;
-        font-size: 0.95rem;
-    }
-
-    .mobile-menu-header .logo-subtitle {
-        color: rgba(255, 255, 255, 0.85);
-        font-size: 0.6rem;
-    }
-
     /* Mobile Close Button */
     .mobile-close-btn {
         display: flex;
@@ -535,16 +535,17 @@
         justify-content: center;
         width: 36px;
         height: 36px;
-        background: rgba(255, 255, 255, 0.15);
-        border: 1px solid rgba(255, 255, 255, 0.25);
+        background: transparent;
+        border: 1px solid rgba(196, 30, 58, 0.2);
         border-radius: 8px;
         cursor: pointer;
-        color: #ffffff;
+        color: #C41E3A;
         flex-shrink: 0;
     }
 
     .mobile-close-btn:hover {
-        background: rgba(255, 255, 255, 0.25);
+        background: rgba(196, 30, 58, 0.05);
+        border-color: #C41E3A;
     }
 
     /* Mobile Nav Links */

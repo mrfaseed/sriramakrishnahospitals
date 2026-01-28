@@ -31,6 +31,11 @@ const openSans = Open_Sans({
 export const metadata = {
   title: "Sri Ramakrishna Hospital",
   description: "Sri Ramakrishna Hospital",
+  icons: {
+    icon: '/favicon/cropped-ramakrishna-logo-32x32.png',
+    shortcut: '/favicon/cropped-ramakrishna-logo-32x32.png',
+    apple: '/favicon/cropped-ramakrishna-logo-180x180.png',
+  },
 };
 
 export default function RootLayout({ children }) {

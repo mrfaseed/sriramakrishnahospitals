@@ -1,5 +1,6 @@
 ﻿"use client";
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 export default function Nav() {
@@ -98,13 +99,14 @@ export default function Nav() {
         <div className="navbar-content">
           {/* Logo */}
           <Link href="/" className="logo" onClick={closeMenu}>
-            <div className="logo-mark">
-              <span>SH</span>
-            </div>
-            <div className="logo-text">
-              <span className="logo-title">SRIRAMAKRISHNA</span>
-              <span className="logo-subtitle">HOSPITAL</span>
-            </div>
+            <Image
+              src="/Navbar-logo.png"
+              alt="Sri Ramakrishna Hospital"
+              width={300}
+              height={72}
+              className="nav-logo-img"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -112,13 +114,13 @@ export default function Nav() {
             {/* Mobile Menu Header */}
             <div className="mobile-menu-header">
               <Link href="/" className="mobile-logo" onClick={closeMenu}>
-                <div className="logo-mark">
-                  <span>SH</span>
-                </div>
-                <div className="logo-text">
-                  <span className="logo-title">SRIRAMAKRISHNA</span>
-                  <span className="logo-subtitle">HOSPITAL</span>
-                </div>
+                <Image
+                  src="/Navbar-logo.png"
+                  alt="Sri Ramakrishna Hospital"
+                  width={220}
+                  height={55}
+                  className="nav-logo-img-mobile"
+                />
               </Link>
               <button
                 className="mobile-close-btn"
