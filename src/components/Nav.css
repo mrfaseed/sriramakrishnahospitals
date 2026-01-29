@@ -191,7 +191,7 @@
 
 @media (max-width: 900px) {
     .nav-logo-img {
-        height: 45px;
+        height: 52px;
     }
 }
 
@@ -434,7 +434,7 @@
     }
 
     .navbar-content {
-        height: 64px;
+        height: 72px;
     }
 
     /* Show hamburger */

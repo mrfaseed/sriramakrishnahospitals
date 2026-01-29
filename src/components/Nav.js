@@ -64,11 +64,11 @@ export default function Nav() {
       <div className="top-bar">
         <div className="top-bar-content">
           <div className="contact-info">
-            <a href="tel:04222222222" className="contact-item">
+            <a href="tel:+918056390983" className="contact-item">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
                 <path fillRule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clipRule="evenodd" />
               </svg>
-              <span>0422 222 2222</span>
+              <span>+91 80563 90983</span>
             </a>
             <a href="mailto:info@sriramakrishnahospital.com" className="contact-item">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
@@ -145,11 +145,11 @@ export default function Nav() {
 
             {/* Mobile Contact Info */}
             <div className="mobile-contact-section">
-              <a href="tel:04222222222" className="mobile-contact-item">
+              <a href="tel:+918056390983" className="mobile-contact-item">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
                   <path fillRule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clipRule="evenodd" />
                 </svg>
-                <span>0422 222 2222</span>
+                <span>+91 80563 90983</span>
               </a>
             </div>
 

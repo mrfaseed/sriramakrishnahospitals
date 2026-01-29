@@ -83,8 +83,8 @@ export default function ServicesPage() {
             <Link href="/contact" className="cta-primary-btn">
               Book Appointment
             </Link>
-            <a href="tel:04222222222" className="cta-secondary-btn">
-              Call: 0422 222 2222
+            <a href="tel:+918056390983" className="cta-secondary-btn">
+              Call: +91 80563 90983
             </a>
           </div>
         </div>

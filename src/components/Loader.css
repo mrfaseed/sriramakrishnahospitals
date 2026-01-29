@@ -1,0 +1,137 @@
+/* =============================================
+   SITE LOADER
+   ============================================= */
+.site-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #ffffff;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+.site-loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Pulse Animation Container */
+.loader-heart-container {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Heart Icon SVG */
+.loader-heart {
+    width: 50px;
+    height: 50px;
+    color: #C41E3A;
+    fill: #C41E3A;
+    animation: heartPulse 1.5s infinite ease-in-out;
+    z-index: 2;
+}
+
+/* Ripple Effect */
+.loader-ripple {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(196, 30, 58, 0.2);
+    animation: ripple 1.5s infinite ease-out;
+    z-index: 1;
+}
+
+.loader-ripple:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+/* Loading Text */
+.loader-text {
+    font-family: "momo trust display", serif;
+    font-size: 1.5rem;
+    color: #1a1f36;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards 0.3s;
+}
+
+.loader-subtext {
+    font-family: "Google Sans Flex", sans-serif;
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-top: 5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards 0.6s;
+}
+
+/* Animations */
+@keyframes heartPulse {
+    0% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.15);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.15);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes ripple {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.8;
+    }
+
+    100% {
+        width: 150%;
+        height: 150%;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

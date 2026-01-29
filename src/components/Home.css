@@ -25,6 +25,8 @@
     justify-content: flex-start;
     overflow: hidden;
     padding-top: 80px;
+    background-color: #0f172a;
+    /* Fallback color while images load */
     /* Just enough to clear nav */
 }
 
@@ -48,6 +50,20 @@
     opacity: 1;
     transform: scale(1);
     z-index: 1;
+}
+
+.hero-img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 900px) {
+    .hero-img {
+        object-position: center;
+        /* Ensure center on mobile too, or adjust if specific images need it */
+    }
 }
 
 /* Lighter Overlay - More visible images */
