@@ -29,7 +29,7 @@ const Doctors = () => {
             department: "Administration",
             qualification: "MBBS",
             description: "Providing visionary leadership with a strong commitment to ethical, patient-centered, and community-focused healthcare.",
-            image: "/p1.jpeg"
+            image: "/p4.jpg"
         },
         {
             id: 4,
@@ -37,7 +37,9 @@ const Doctors = () => {
             role: "Assistant Doctor",
             department: "General Care",
             qualification: "MBBS",
+            
             description: "Actively involved in day-to-day patient care and clinical coordination to ensure continuous medical support.",
+            image: "/p1.jpeg"
         }
     ];
 
