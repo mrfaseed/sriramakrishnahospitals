@@ -73,7 +73,7 @@ export default function Contact() {
                                 <div className="info-icon"><PhoneIcon /></div>
                                 <div className="info-content">
                                     <h3>Call Us</h3>
-                                    <p>+91 1234567890<br />+91 1234567890</p>
+                                    <p>+91 8056390983</p>
                                 </div>
                             </div>
                             <div className="info-row">
