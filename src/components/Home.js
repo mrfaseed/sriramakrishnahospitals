@@ -175,7 +175,7 @@ export default function Home() {
           <p className='hero-subtext'>
             Sri Ramakrishna Hospitals is a leading cardiac care center offering
             comprehensive heart treatments including interventional cardiology,
-            cardiac surgery, and advanced electrophysiology services.
+            General Medicine, and advanced electrophysiology services.
           </p>
           <div className='hero-buttons'>
             <Link href="/contact" className='btn-primary'>
@@ -211,8 +211,8 @@ export default function Home() {
               </svg>
             </div>
             <div className='info-text'>
-              <span className='info-title'>Cardiac Surgery</span>
-              <span className='info-desc'>Bypass & Valve Repair</span>
+              <span className='info-title'>General Medicine</span>
+              <span className='info-desc'>24/7 Care</span>
             </div>
           </div>
           <div className='info-divider'></div>
