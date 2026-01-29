@@ -90,7 +90,7 @@ const services = [
 
 const carouselImages = [
   { src: '/5U1A4809.JPG', alt: 'Sri Ramakrishna Hospitals - Patient Care' },
-   { src: '/5U1A4804.JPG', alt: 'Sri Ramakrishna Hospitals - Reception Area' },
+  { src: '/5U1A4804.JPG', alt: 'Sri Ramakrishna Hospitals - Reception Area' },
   { src: '/008.JPG', alt: 'Sri Ramakrishna Hospitals - Hospital Exterior' },
   { src: '/full_hospital_1.JPG', alt: 'Sri Ramakrishna Hospitals - Hospital Exterior' },
   { src: '/5U1A4811.JPG', alt: 'Sri Ramakrishna Hospitals - Healthcare Services' },

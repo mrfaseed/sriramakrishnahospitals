@@ -19,7 +19,6 @@ export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const openModal = (img) => {
-    if (window.innerWidth <= 768) return; 
     setSelectedImage(img);
     document.body.style.overflow = 'hidden';
   };

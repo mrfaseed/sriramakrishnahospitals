@@ -11,7 +11,7 @@ body {
 }
 
 ::selection {
-  background-color: #7b68ee;
-  /* Dark Lavender */
+  background-color: #ff6b6b;
+  /* Light Red */
   color: #ffffff;
 }

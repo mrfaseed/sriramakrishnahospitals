@@ -333,4 +333,32 @@
         height: 200px;
         right: -30px;
     }
+
+    /* Mobile Modal Adjustments */
+    .modal-content {
+        max-width: 95vw;
+        max-height: 80vh;
+        margin: 0;
+    }
+
+    .modal-content img {
+        max-height: 80vh;
+        object-fit: contain;
+    }
+
+    .close-button {
+        position: absolute;
+        top: -50px;
+        /* Move it well above */
+        right: 0;
+        background: rgba(255, 255, 255, 0.2);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 4px;
+        /* Optical center */
+    }
 }
