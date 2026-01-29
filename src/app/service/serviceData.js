@@ -70,6 +70,7 @@ export const services = [
             </svg>
         ),
         category: 'interventional',
+        video: '/ASD.mp4',
         details: {
             overview: "Congenital heart defects are structural problems with the heart present at birth. Common types include Atrial Septal Defect (ASD) and Ventricular Septal Defect (VSD), often referred to as 'holes in the heart'.",
             duration: "3-5 Hours",

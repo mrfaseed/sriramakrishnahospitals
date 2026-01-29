@@ -6,32 +6,39 @@ const Doctors = () => {
     const doctors = [
         {
             id: 1,
-            name: "Dr. Person 1",
+            name: "Dr. B. Rajesh",
             role: "Senior Consultant",
-            department: "Cardiology",
-            qualification: "MBBS, MD, DM"
+            department: "Interventional Cardiology",
+            qualification: "MD (General Medicine), DM (Interventional Cardiology)",
+            description: "Senior Interventional Cardiologist with extensive experience in advanced and complex cardiac procedures.",
+            image: "/p3.jpeg"
         },
         {
             id: 2,
-            name: "Dr. Person 2",
-            role: "Chief Surgeon",
-            department: "Cardiology",
-            qualification: "MBBS, MS, MCh"
+            name: "Dr. B. Paadma Priya",
+            role: "Senior Consultant",
+            department: "Nephrology",
+            qualification: "MD (General Medicine), DM (Nephrology)",
+            description: "Consultant Nephrologist specializing in comprehensive kidney care and dialysis management.",
+            image: "/p2.jpeg"
         },
         {
             id: 3,
-            name: "Dr. Person 3",
-            role: "Head of Department",
-            department: "Cardiology",
-            qualification: "MBBS, MS, DNB"
+            name: "Dr. K. Vellaichamy",
+            role: "Hospital Director",
+            department: "Administration",
+            qualification: "MBBS",
+            description: "Providing visionary leadership with a strong commitment to ethical, patient-centered, and community-focused healthcare.",
+            image: "/p1.jpeg"
         },
         {
             id: 4,
-            name: "Dr. Person 4",
-            role: "Cardiology",
-            department: "Cardiology",
-            qualification: "MBBS, MD"
-        },
+            name: "Dr. V. Sivaraman",
+            role: "Assistant Doctor",
+            department: "General Care",
+            qualification: "MBBS",
+            description: "Actively involved in day-to-day patient care and clinical coordination to ensure continuous medical support.",
+        }
     ];
 
     return (
@@ -57,12 +64,19 @@ const Doctors = () => {
                         {doctors.map((doctor) => (
                             <div key={doctor.id} className="pro-card">
                                 <div className="image-container">
-                                    <div className="placeholder-image">
-                                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 5C13.66 5 15 6.34 15 8C15 9.66 13.66 11 12 11C10.34 11 9 9.66 9 8C9 6.34 10.34 5 12 5ZM12 19.2C9.5 19.2 7.29 17.92 6 15.98C6.03 13.99 10 12.9 12 12.9C13.99 12.9 17.97 13.99 18 15.98C16.71 17.92 14.5 19.2 12 19.2Z" fill="currentColor" />
-                                        </svg>
-                                        <span className="upload-text">Upload Portrait</span>
-                                    </div>
+                                    {doctor.image ? (
+                                        <img
+                                            src={doctor.image}
+                                            alt={doctor.name}
+                                            className="doctor-image"
+                                        />
+                                    ) : (
+                                        <div className="placeholder-image">
+                                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z" fill="#a0a0a0" />
+                                            </svg>
+                                        </div>
+                                    )}
                                 </div>
 
                                 <div className="info-container">
@@ -71,6 +85,7 @@ const Doctors = () => {
                                     <div className="doctor-details">
                                         <span className="role">{doctor.role}</span>
                                         <span className="qualification">{doctor.qualification}</span>
+                                        <p className="doctor-description">{doctor.description}</p>
                                     </div>
                                     <button className="book-btn">
                                         Book Appointment

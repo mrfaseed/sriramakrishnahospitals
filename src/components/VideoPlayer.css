@@ -1,0 +1,121 @@
+.video-player-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    aspect-ratio: 16/9;
+    background: #000;
+}
+
+.custom-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+}
+
+/* Controls Overlay */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.video-player-container:hover .video-overlay,
+.video-player-container.paused .video-overlay {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Play Button Center */
+.play-btn-center {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: scale(0.9);
+}
+
+.play-btn-center:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.3);
+    border-color: #fff;
+}
+
+.play-icon,
+.pause-icon {
+    width: 32px;
+    height: 32px;
+    fill: #fff;
+    margin-left: 4px;
+    /* Optical adjustment for play icon */
+}
+
+.pause-icon {
+    margin-left: 0;
+}
+
+/* Bottom Controls Bar */
+.controls-bar {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 12px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.video-player-container:hover .controls-bar {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.control-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #fff;
+}
+
+.control-btn:hover {
+    background: rgba(196, 30, 58, 0.9);
+    /* Brand Red */
+    transform: scale(1.1);
+}
+
+.control-icon {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+}

@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { services } from '../serviceData';
 import './service-detail.css';
 
+import VideoPlayer from '../../../components/VideoPlayer';
+
 export default async function ServiceDetailPage(props) {
     const params = await props.params;
     // Find the service based on the slug
@@ -66,6 +68,13 @@ export default async function ServiceDetailPage(props) {
                     </div>
                 </div>
             </section>
+
+            {/* Video Section */}
+            {service.video && (
+                <section className="service-video-section" style={{ background: '#f8f9fa', padding: '0 24px' }}>
+                    <VideoPlayer src={service.video} />
+                </section>
+            )}
 
             {/* Info Strip */}
             <div className="info-strip">
