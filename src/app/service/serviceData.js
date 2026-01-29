@@ -10,6 +10,7 @@ export const services = [
             </svg>
         ),
         category: 'diagnostic',
+        video: '/angio.mp4',
         details: {
             overview: "An angiogram is a diagnostic test that uses X-ray imaging and a special dye (contrast material) to view your heart's blood vessels. It helps doctors pinpoint the location and severity of blockages in the arteries.",
             duration: "30-60 Mins",
