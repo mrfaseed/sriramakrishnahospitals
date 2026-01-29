@@ -10,7 +10,7 @@ export const services = [
             </svg>
         ),
         category: 'diagnostic',
-        video: '/angio.mp4',
+        video: '/angio/output.m3u8',
         details: {
             overview: "An angiogram is a diagnostic test that uses X-ray imaging and a special dye (contrast material) to view your heart's blood vessels. It helps doctors pinpoint the location and severity of blockages in the arteries.",
             duration: "30-60 Mins",
@@ -40,6 +40,7 @@ export const services = [
             </svg>
         ),
         category: 'interventional',
+        video: '/pci/output.m3u8',
         details: {
             overview: "Angioplasty is a minimally invasive procedure used to open clogged heart arteries. It involves temporarily inserting and inflating a tiny balloon where your artery is clogged to help widen the artery.",
             duration: "1-2 Hours",
@@ -71,7 +72,7 @@ export const services = [
             </svg>
         ),
         category: 'interventional',
-        video: '/ASD.mp4',
+        video: '/asd/output.m3u8',
         details: {
             overview: "Congenital heart defects are structural problems with the heart present at birth. Common types include Atrial Septal Defect (ASD) and Ventricular Septal Defect (VSD), often referred to as 'holes in the heart'.",
             duration: "3-5 Hours",
@@ -219,6 +220,7 @@ export const services = [
             </svg>
         ),
         category: 'diagnostic',
+        video: '/tmt/output.m3u8',
         details: {
             overview: "A Treadmill Stress Test (TMT) measures how well your heart works during physical activity. It helps diagnose coronary artery disease and determine safe exercise levels.",
             duration: "30-45 Mins",
@@ -249,6 +251,7 @@ export const services = [
             </svg>
         ),
         category: 'care',
+        video: '/icu/output.m3u8',
         details: {
             overview: "Our Cardiac ICU provides 24/7 specialized care for patients with life-threatening heart conditions. It is staffed by a dedicated team of cardiologists, intensivists, and critical care nurses.",
             duration: "Continuous",

@@ -1,5 +1,6 @@
 "use client";
 import React, { useRef, useState, useEffect } from 'react';
+import Hls from 'hls.js';
 import './VideoPlayer.css';
 
 const VideoPlayer = ({ src, poster }) => {
@@ -19,25 +20,59 @@ const VideoPlayer = ({ src, poster }) => {
     };
 
     const toggleMute = (e) => {
-        e.stopPropagation(); // Prevent toggling play when clicking mute
+        e.stopPropagation();
         if (videoRef.current) {
             videoRef.current.muted = !isMuted;
             setIsMuted(!isMuted);
         }
     };
 
-    // Update state when video ends
+    // Initialize HLS
+    useEffect(() => {
+        const video = videoRef.current;
+        let hls;
+
+        if (video) {
+            if (src.endsWith('.m3u8')) {
+                if (Hls.isSupported()) {
+                    hls = new Hls();
+                    hls.loadSource(src);
+                    hls.attachMedia(video);
+                } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                    // Native HLS support
+                    video.src = src;
+                }
+            } else {
+                // Regular video file
+                video.src = src;
+            }
+        }
+
+        return () => {
+            if (hls) {
+                hls.destroy();
+            }
+        };
+    }, [src]);
+
+    // Handle video events
     useEffect(() => {
         const video = videoRef.current;
         const handleEnded = () => setIsPlaying(false);
+        const handlePlay = () => setIsPlaying(true);
+        const handlePause = () => setIsPlaying(false);
 
         if (video) {
             video.addEventListener('ended', handleEnded);
+            video.addEventListener('play', handlePlay);
+            video.addEventListener('pause', handlePause);
         }
 
         return () => {
             if (video) {
                 video.removeEventListener('ended', handleEnded);
+                video.removeEventListener('play', handlePlay);
+                video.removeEventListener('pause', handlePause);
             }
         };
     }, []);
@@ -46,11 +81,11 @@ const VideoPlayer = ({ src, poster }) => {
         <div className={`video-player-container ${isPlaying ? 'playing' : 'paused'}`} onClick={togglePlay}>
             <video
                 ref={videoRef}
-                src={src}
                 className="custom-video"
                 poster={poster}
-                playsInline
                 loop
+                playsInline
+                muted={isMuted} // Control mute via state
             />
 
             {/* Center Play Button Overlay */}
