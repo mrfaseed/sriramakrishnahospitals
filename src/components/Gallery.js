@@ -11,7 +11,7 @@ const galleryItems = [
   { type: 'image', src: '/5U1A4809.JPG', alt: 'Waiting Area' },
   { type: 'image', src: '/5U1A4811.JPG', alt: 'Corridor' },
   { type: 'image', src: '/5U1A4813.JPG.jpeg', alt: 'Medical Procedure' }, /* Swapped in */
-  { type: 'image', src: '/5U1A4832_new.JPG', alt: 'Hospital Facility' },
+  { type: 'image', src: '/5U1A4832_fixed.png', alt: 'Hospital Facility' },
   { type: 'image', src: '/008.JPG', alt: 'Medical Equipment' },
   { type: 'image', src: '/5U1A4835.JPG', alt: 'Hospital Interior' }
 ];
