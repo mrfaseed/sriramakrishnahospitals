@@ -29,6 +29,31 @@ const VideoPlayer = ({ src, poster }) => {
     // Update state when video ends
     useEffect(() => {
         const video = videoRef.current;
+        let hls;
+
+        // Function to init HLS
+        const initHls = async () => {
+            // Dynamically import HLS.js to avoid SSR issues
+            const Hls = (await import('hls.js')).default;
+
+            if (Hls.isSupported() && src.endsWith('.m3u8')) {
+                hls = new Hls();
+                hls.loadSource(src);
+                hls.attachMedia(video);
+                hls.on(Hls.Events.MANIFEST_PARSED, function () {
+                    // Ready to play
+                });
+            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                // Native HLS support (Safari)
+                video.src = src;
+            } else {
+                // Regular video
+                video.src = src;
+            }
+        };
+
+        initHls();
+
         const handleEnded = () => setIsPlaying(false);
 
         if (video) {
@@ -39,14 +64,16 @@ const VideoPlayer = ({ src, poster }) => {
             if (video) {
                 video.removeEventListener('ended', handleEnded);
             }
+            if (hls) {
+                hls.destroy();
+            }
         };
-    }, []);
+    }, [src]);
 
     return (
         <div className={`video-player-container ${isPlaying ? 'playing' : 'paused'}`} onClick={togglePlay}>
             <video
                 ref={videoRef}
-                src={src}
                 className="custom-video"
                 poster={poster}
                 playsInline

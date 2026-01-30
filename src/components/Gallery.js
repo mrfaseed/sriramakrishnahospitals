@@ -1,30 +1,38 @@
 ﻿"use client";
 import React, { useState } from 'react';
 import Image from 'next/image';
+import VideoPlayer from './VideoPlayer';
 import './Gallery.css';
 
-const images = [
-  '/5U1A4832_new.JPG',
-  '/5U1A4804.JPG',
-  '/5U1A4807.JPG',
-  '/5U1A4809.JPG',
-  '/5U1A4811.JPG',
-  '/5U1A4826.JPG',
-  '/full_hospital_1.jpg',
-  '/008.JPG',
-  '/5U1A4835.JPG'
+const galleryItems = [
+  { type: 'image', src: '/full_hospital_1.jpg', alt: 'Full Hospital View' },
+  { type: 'image', src: '/5U1A4804.JPG', alt: 'Hospital Entrance' },
+  { type: 'image', src: '/5U1A4807.JPG', alt: 'Reception Area' },
+  { type: 'image', src: '/5U1A4809.JPG', alt: 'Waiting Area' },
+  { type: 'image', src: '/5U1A4811.JPG', alt: 'Corridor' },
+  { type: 'image', src: '/5U1A4813.JPG.jpeg', alt: 'Medical Procedure' }, /* Swapped in */
+  { type: 'image', src: '/5U1A4832_new.JPG', alt: 'Hospital Facility' },
+  { type: 'image', src: '/008.JPG', alt: 'Medical Equipment' },
+  { type: 'image', src: '/5U1A4835.JPG', alt: 'Hospital Interior' }
 ];
 
-export default function Gallery() {
-  const [selectedImage, setSelectedImage] = useState(null);
+const featuredVideo = {
+  type: 'video',
+  src: '/videos/pacemaker/playlist.m3u8',
+  alt: 'Pacemaker Implantation Procedure',
+  poster: '/5U1A4826.JPG' /* New request */
+};
 
-  const openModal = (img) => {
-    setSelectedImage(img);
+export default function Gallery() {
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const openModal = (item) => {
+    setSelectedItem(item);
     document.body.style.overflow = 'hidden';
   };
 
   const closeModal = () => {
-    setSelectedImage(null);
+    setSelectedItem(null);
     document.body.style.overflow = 'auto';
   };
 
@@ -49,34 +57,77 @@ export default function Gallery() {
         </div>
       </header>
 
+      {/* Featured Video Section */}
+      <section className="featured-video-section">
+        <h2 className="section-heading">Featured Procedure</h2>
+        <div
+          className="featured-video-card"
+          onClick={() => openModal(featuredVideo)}
+        >
+          <div className="featured-image-wrapper">
+            <Image
+              src={featuredVideo.poster}
+              alt={featuredVideo.alt}
+              fill
+              className="featured-video-cover"
+            />
+            <div className="video-overlay-persistent">
+              <div className="play-button-outer">
+                <span className="play-icon-large">▶</span>
+              </div>
+            </div>
+            <div className="video-badge-large">WATCH VIDEO</div>
+          </div>
+          <div className="featured-info">
+            <h3>{featuredVideo.alt}</h3>
+            <p>Watch a detailed overview of the procedure.</p>
+          </div>
+        </div>
+      </section>
+
       <div className="gallery-grid">
-        {images.map((src, index) => (
+        {galleryItems.map((item, index) => (
           <div
             key={index}
-            className={`gallery-item item-${index % 4}`}
-            onClick={() => openModal(src)}
+            className={`gallery-item item-${index % 4} ${item.type === 'video' ? 'video-item' : ''}`}
+            onClick={() => openModal(item)}
           >
             <div className="image-wrapper">
               <Image
-                src={src}
-                alt={`Gallery Image ${index + 1}`}
+                src={item.type === 'video' ? item.poster : item.src}
+                alt={item.alt}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="gallery-img"
               />
               <div className="overlay">
-                <span className="overlay-heart">❤</span>
+                {item.type === 'video' ? (
+                  <div className="video-overlay-persistent">
+                    <span className="play-icon-large">▶</span>
+                  </div>
+                ) : (
+                  <span className="overlay-heart">❤</span>
+                )}
               </div>
+              {item.type === 'video' && (
+                <div className="video-badge">VIDEO</div>
+              )}
             </div>
           </div>
         ))}
       </div>
 
-      {selectedImage && (
+      {selectedItem && (
         <div className="modal" onClick={closeModal}>
           <div className="modal-content" onClick={e => e.stopPropagation()}>
             <span className="close-button" onClick={closeModal}>&times;</span>
-            <img src={selectedImage} alt="Full View" />
+            {selectedItem.type === 'video' ? (
+              <div style={{ width: '100%', height: '100%', minHeight: '300px' }}>
+                <VideoPlayer src={selectedItem.src} poster={selectedItem.poster} />
+              </div>
+            ) : (
+              <img src={selectedItem.src} alt={selectedItem.alt} />
+            )}
           </div>
         </div>
       )}

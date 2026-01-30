@@ -1,6 +1,7 @@
 ﻿'use client';
 import React from 'react';
 import './AboutUs.css';
+import Image from 'next/image';
 
 // SVG Icon Components
 const HeartPulseIcon = () => (
@@ -248,7 +249,7 @@ export default function AboutUs() {
           <div className='leaders-grid'>
             <div className='leader-card'>
               <div className='leader-avatar'>
-                <UserDoctorIcon />
+                <Image src="/p3.jpeg" alt="Dr. B. Rajesh" width={80} height={80} className="leader-img" />
               </div>
               <h4>Dr. B. Rajesh</h4>
               <span className='leader-degree'>MD (General Medicine), DM (Interventional Cardiology)</span>
@@ -258,7 +259,7 @@ export default function AboutUs() {
 
             <div className='leader-card'>
               <div className='leader-avatar'>
-                <UserDoctorIcon />
+                <Image src="/p2.jpeg" alt="Dr. B. Padma Priya" width={80} height={80} className="leader-img" />
               </div>
               <h4>Dr. B. Padma Priya</h4>
               <span className='leader-degree'>MD (General Medicine), DM (Nephrology)</span>
@@ -268,7 +269,7 @@ export default function AboutUs() {
 
             <div className='leader-card director'>
               <div className='leader-avatar'>
-                <UserTieIcon />
+                <Image src="/p4.jpg" alt="Dr. K. Vellaichamy" width={80} height={80} className="leader-img" />
               </div>
               <h4>Dr. K. Vellaichamy</h4>
               <span className='leader-degree'>MBBS</span>
@@ -278,7 +279,7 @@ export default function AboutUs() {
 
             <div className='leader-card'>
               <div className='leader-avatar'>
-                <UserDoctorIcon />
+                <Image src="/p1.jpeg" alt="Dr. V. Sivaraman" width={80} height={80} className="leader-img" />
               </div>
               <h4>Dr. V. Sivaraman</h4>
               <span className='leader-degree'>MBBS</span>

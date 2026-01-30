@@ -76,6 +76,20 @@ export default function Services() {
             <div className='grid-features'>
               <div className='feature-item'><strong>Diagnostic:</strong> ECG, ECHO, TMT</div>
             </div>
+
+            {/* Pacemaker Video */}
+            <div className='service-video-container'>
+              <video
+                className='service-video'
+                controls
+                playsInline
+                poster="/thumbnail-placeholder.jpg"
+              >
+                <source src="/videos/pacemaker/playlist.m3u8" type="application/x-mpegURL" />
+                <source src="/videos/pacemaker/segment_000.ts" type="video/mp2t" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
           <a href="/service/details" className='view-more-btn'>Explore Service</a>
         </div>

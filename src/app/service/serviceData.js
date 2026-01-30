@@ -130,6 +130,7 @@ export const services = [
             </svg>
         ),
         category: 'interventional',
+        video: '/videos/pacemaker/playlist.m3u8',
         details: {
             overview: "A pacemaker is a small device placed under the skin in the chest to help control your heartbeat. It is used to treat arrhythmias, particularly bradycardia (slow heartbeat).",
             duration: "1-2 Hours",
