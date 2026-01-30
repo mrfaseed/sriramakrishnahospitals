@@ -137,13 +137,13 @@ export default function Home() {
   return (
     <div className='home-container'>
       {/* Hero Section - Full Viewport */}
-      <section className='hero-section'>
+      <section className='home-hero-section'>
         {/* Background Images */}
-        <div className='hero-bg'>
+        <div className='home-hero-bg'>
           {carouselImages.map((image, index) => (
             <div
               key={index}
-              className={`hero-slide ${index === currentSlide ? 'active' : ''}`}
+              className={`home-hero-slide ${index === currentSlide ? 'active' : ''}`}
             >
               <Image
                 src={image.src}
@@ -152,32 +152,32 @@ export default function Home() {
                 priority={index === 0}
                 quality={85}
                 sizes="100vw"
-                className="hero-img"
+                className="home-hero-img"
               />
             </div>
           ))}
         </div>
 
         {/* Lighter Overlay for Text Visibility */}
-        <div className='hero-overlay'></div>
+        <div className='home-hero-overlay'></div>
 
         {/* Main Content */}
-        <div className='hero-content'>
-          <span className='hero-tagline'>
+        <div className='home-hero-content'>
+          <span className='home-hero-tagline'>
             <svg className='heart-icon' viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
             Centre of Excellence in Cardiac Care
           </span>
-          <h1 className='hero-headline'>
+          <h1 className='home-hero-headline'>
             Advanced Heart Care, <span>Expert Cardiologists</span>
           </h1>
-          <p className='hero-subtext'>
+          <p className='home-hero-subtext'>
             Sri Ramakrishna Hospitals is a leading cardiac care center offering
             comprehensive heart treatments including interventional cardiology,
             General Medicine, and advanced electrophysiology services.
           </p>
-          <div className='hero-buttons'>
+          <div className='home-hero-buttons'>
             <Link href="/contact" className='btn-primary'>
               Book Appointment
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -191,41 +191,41 @@ export default function Home() {
         </div>
 
         {/* Hospital Info Bar */}
-        <div className='info-bar'>
-          <div className='info-block'>
-            <div className='info-icon'>
+        <div className='home-info-bar'>
+          <div className='home-info-block'>
+            <div className='home-info-icon'>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
               </svg>
             </div>
-            <div className='info-text'>
-              <span className='info-title'>Interventional Cardiology</span>
-              <span className='info-desc'>Angioplasty & Stenting</span>
+            <div className='home-info-text'>
+              <span className='home-info-title'>Interventional Cardiology</span>
+              <span className='home-info-desc'>Angioplasty & Stenting</span>
             </div>
           </div>
-          <div className='info-divider'></div>
-          <div className='info-block'>
-            <div className='info-icon'>
+          <div className='home-info-divider'></div>
+          <div className='home-info-block'>
+            <div className='home-info-icon'>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
               </svg>
             </div>
-            <div className='info-text'>
-              <span className='info-title'>General Medicine</span>
-              <span className='info-desc'>24/7 Care</span>
+            <div className='home-info-text'>
+              <span className='home-info-title'>General Medicine</span>
+              <span className='home-info-desc'>24/7 Care</span>
             </div>
           </div>
-          <div className='info-divider'></div>
-          <div className='info-block'>
-            <div className='info-icon'>
+          <div className='home-info-divider'></div>
+          <div className='home-info-block'>
+            <div className='home-info-icon'>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <circle cx="12" cy="12" r="10" />
                 <path d="M12 6v6l4 2" />
               </svg>
             </div>
-            <div className='info-text'>
-              <span className='info-title'>24/7 Emergency</span>
-              <span className='info-desc'>Round the Clock Care</span>
+            <div className='home-info-text'>
+              <span className='home-info-title'>24/7 Emergency</span>
+              <span className='home-info-desc'>Round the Clock Care</span>
             </div>
           </div>
         </div>
@@ -233,9 +233,9 @@ export default function Home() {
 
       {/* About Us Preview Section */}
       <section className='home-about-section'>
-        <div className='section-header'>
-          <span className='sub-label'>Who We Are</span>
-          <h2 className='section-title'>A Legacy of Healing & Compassion</h2>
+        <div className='home-section-header'>
+          <span className='home-sub-label'>Who We Are</span>
+          <h2 className='home-section-title'>A Legacy of Healing & Compassion</h2>
         </div>
 
         <div className='about-content-wrapper'>
@@ -282,9 +282,9 @@ export default function Home() {
 
       {/* Services Preview Section */}
       <section className='home-services-section'>
-        <div className='section-header'>
-          <span className='sub-label'>What We Do</span>
-          <h2 className='section-title'>Our Centers of Excellence</h2>
+        <div className='home-section-header'>
+          <span className='home-sub-label'>What We Do</span>
+          <h2 className='home-section-title'>Our Centers of Excellence</h2>
         </div>
 
         <div className='services-grid'>
@@ -321,9 +321,9 @@ export default function Home() {
 
       {/* CTA Box Section */}
       <section className='cta-box-section' ref={ctaRef}>
-        <div className='cta-box'>
-          <div className='cta-pattern'></div>
-          <div className='cta-content'>
+        <div className='home-cta-box'>
+          <div className='home-cta-pattern'></div>
+          <div className='home-cta-content'>
             <h2>Need Expert Cardiac Consultation?</h2>
             <p>
               Our specialists are ready to provide you with the best heart care.
@@ -335,7 +335,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className={`cta-image ${isCtaVisible ? 'active' : ''}`} style={{ position: 'relative', width: '300px', height: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div className={`home-cta-image ${isCtaVisible ? 'active' : ''}`} style={{ position: 'relative', width: '300px', height: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             {/* Using an abstract heart or doctor illustration here could be good, for now using a subtle icon or just spacing */}
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="0.5" style={{ width: '100%', height: '100%', color: 'rgba(255,255,255,0.1)' }}>
               <path className="heart-path" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
