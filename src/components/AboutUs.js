@@ -260,7 +260,7 @@ export default function AboutUs() {
               <div className='leader-avatar'>
                 <UserDoctorIcon />
               </div>
-              <h4>Dr. B. Paadma Priya</h4>
+              <h4>Dr. B. Padma Priya</h4>
               <span className='leader-degree'>MD (General Medicine), DM (Nephrology)</span>
               <p className='leader-role'>Senior Consultant</p>
               <p className='leader-desc'>Consultant Nephrologist specializing in comprehensive kidney care and dialysis management.</p>
