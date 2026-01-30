@@ -10,7 +10,7 @@ const images = [
   '/5U1A4809.JPG',
   '/5U1A4811.JPG',
   '/5U1A4826.JPG',
-  '/full_hospital_1.JPG',
+  '/full_hospital_1.jpg',
   '/008.JPG',
   '/5U1A4835.JPG'
 ];
