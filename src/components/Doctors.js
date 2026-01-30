@@ -37,7 +37,7 @@ const Doctors = () => {
             role: "Assistant Doctor",
             department: "General Care",
             qualification: "MBBS",
-            
+
             description: "Actively involved in day-to-day patient care and clinical coordination to ensure continuous medical support.",
             image: "/p1.jpeg"
         }
@@ -106,11 +106,7 @@ const Doctors = () => {
             <section className="trust-section">
                 <div className="container">
                     <div className="trust-grid">
-                        <div className="trust-item">
-                            <span className="number">50+</span>
-                            <span className="label">Specialists</span>
-                        </div>
-                        <div className="separator"></div>
+
                         <div className="trust-item">
                             <span className="number">24/7</span>
                             <span className="label">Emergency Care</span>
