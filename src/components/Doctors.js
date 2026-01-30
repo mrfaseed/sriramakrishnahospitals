@@ -15,7 +15,7 @@ const Doctors = () => {
         },
         {
             id: 2,
-            name: "Dr. B. Paadma Priya",
+            name: "Dr. B. Padma Priya",
             role: "Senior Consultant",
             department: "Nephrology",
             qualification: "MD (General Medicine), DM (Nephrology)",
@@ -37,7 +37,7 @@ const Doctors = () => {
             role: "Assistant Doctor",
             department: "General Care",
             qualification: "MBBS",
-            
+
             description: "Actively involved in day-to-day patient care and clinical coordination to ensure continuous medical support.",
             image: "/p1.jpeg"
         }
@@ -47,12 +47,12 @@ const Doctors = () => {
         <div className="doctors-page-elegant">
             {/* Elegant Hero Section */}
             <section className="elegant-hero">
-                <div className="hero-content">
-                    <div className="title-wrapper">
-                        <span className="subtitle">Medical Excellence</span>
-                        <h1 className="title">Our Specialists</h1>
+                <div className="doctors-hero-content">
+                    <div className="doctors-title-wrapper">
+                        <span className="doctors-subtitle">Medical Excellence</span>
+                        <h1 className="doctors-title">Our Specialists</h1>
                     </div>
-                    <p className="description">
+                    <p className="doctors-description">
                         Meet our team of distinguished medical professionals dedicated to providing
                         world-class healthcare with compassion and expertise.
                     </p>
@@ -106,11 +106,7 @@ const Doctors = () => {
             <section className="trust-section">
                 <div className="container">
                     <div className="trust-grid">
-                        <div className="trust-item">
-                            <span className="number">50+</span>
-                            <span className="label">Specialists</span>
-                        </div>
-                        <div className="separator"></div>
+
                         <div className="trust-item">
                             <span className="number">24/7</span>
                             <span className="label">Emergency Care</span>
