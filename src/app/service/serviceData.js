@@ -333,6 +333,7 @@ export const services = [
             </svg>
         ),
         category: 'care',
+        video: '/eecp/output.m3u8',
         details: {
             overview: "EECP (Enhanced External Counter Pulsation) is a non-invasive treatment for patients with chronic stable angina or heart failure. It uses inflatable cuffs on the legs to increase blood flow to the heart.",
             duration: "1 Hour",
