@@ -303,6 +303,7 @@ export const services = [
             </svg>
         ),
         category: 'care',
+        video: '/dialysis/output.m3u8',
         details: {
             overview: "We offer comprehensive dialysis services for patients with acute or chronic kidney failure. Our unit is equipped with advanced dialysis machines and adheres to strict infection control protocols.",
             duration: "4 Hours",
