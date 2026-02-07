@@ -192,6 +192,7 @@ export const services = [
             </svg>
         ),
         category: 'diagnostic',
+        video: '/echo/output.m3u8',
         details: {
             overview: "An echocardiogram uses sound waves (ultrasound) to create moving pictures of your heart. It allows doctors to see your heart beating and pumping blood.",
             duration: "30-45 Mins",
@@ -303,6 +304,7 @@ export const services = [
             </svg>
         ),
         category: 'care',
+        video: '/dialysis/output.m3u8',
         details: {
             overview: "We offer comprehensive dialysis services for patients with acute or chronic kidney failure. Our unit is equipped with advanced dialysis machines and adheres to strict infection control protocols.",
             duration: "4 Hours",

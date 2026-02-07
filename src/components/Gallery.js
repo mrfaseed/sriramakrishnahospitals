@@ -10,17 +10,34 @@ const galleryItems = [
   { type: 'image', src: '/5U1A4807.JPG', alt: 'Reception Area' },
   { type: 'image', src: '/5U1A4809.JPG', alt: 'Waiting Area' },
   { type: 'image', src: '/5U1A4811.JPG', alt: 'Corridor' },
-  { type: 'image', src: '/5U1A4813.JPG.jpeg', alt: 'Medical Procedure' }, /* Swapped in */
+  { type: 'image', src: '/5U1A4813.JPG.jpeg', alt: 'Medical Procedure' },
   { type: 'image', src: '/5U1A4832_fixed.png', alt: 'Hospital Facility' },
   { type: 'image', src: '/008.JPG', alt: 'Medical Equipment' },
-  { type: 'image', src: '/5U1A4835.JPG', alt: 'Hospital Interior' }
+  { type: 'image', src: '/5U1A4835.JPG', alt: 'Hospital Interior' },
+  // New Photos
+  { type: 'image', src: '/new_photos_in_gallery/5U1A4820.JPG', alt: 'Hospital Scene' },
+  { type: 'image', src: '/new_photos_in_gallery/Screenshot (678).png', alt: 'Gallery Image 1' },
+  { type: 'image', src: '/new_photos_in_gallery/Screenshot (679).png', alt: 'Gallery Image 2' },
+  { type: 'image', src: '/new_photos_in_gallery/Screenshot (680).png', alt: 'Gallery Image 3' },
+  { type: 'image', src: '/new_photos_in_gallery/Screenshot (681).png', alt: 'Gallery Image 4' },
+  { type: 'image', src: '/new_photos_in_gallery/Screenshot (682).png', alt: 'Gallery Image 5' },
+  { type: 'image', src: '/new_photos_in_gallery/Screenshot (683).png', alt: 'Gallery Image 6' },
+  { type: 'image', src: '/new_photos_in_gallery/Screenshot (684).png', alt: 'Gallery Image 7' },
+  // Dialysis Video removed from here
 ];
 
 const featuredVideo = {
   type: 'video',
   src: '/videos/pacemaker/playlist.m3u8',
   alt: 'Pacemaker Implantation Procedure',
-  poster: '/5U1A4826.JPG' /* New request */
+  poster: '/5U1A4826.JPG'
+};
+
+const dialysisVideo = {
+  type: 'video',
+  src: '/dialysis/output.m3u8',
+  alt: 'Dialysis Facility Tour',
+  poster: '/new_photos_in_gallery/5U1A4820.JPG'
 };
 
 export default function Gallery() {
@@ -59,10 +76,13 @@ export default function Gallery() {
 
       {/* Featured Video Section */}
       <section className="featured-video-section">
-        <h2 className="section-heading">Featured Procedure</h2>
+        <h2 className="section-heading">Featured Procedures</h2>
+
+        {/* Pacemaker Video */}
         <div
           className="featured-video-card"
           onClick={() => openModal(featuredVideo)}
+          style={{ marginBottom: '2rem' }}
         >
           <div className="featured-image-wrapper">
             <Image
@@ -81,6 +101,31 @@ export default function Gallery() {
           <div className="featured-info">
             <h3>{featuredVideo.alt}</h3>
             <p>Watch a detailed overview of the procedure.</p>
+          </div>
+        </div>
+
+        {/* Dialysis Video */}
+        <div
+          className="featured-video-card"
+          onClick={() => openModal(dialysisVideo)}
+        >
+          <div className="featured-image-wrapper">
+            <Image
+              src={dialysisVideo.poster}
+              alt={dialysisVideo.alt}
+              fill
+              className="featured-video-cover"
+            />
+            <div className="video-overlay-persistent">
+              <div className="play-button-outer">
+                <span className="play-icon-large">▶</span>
+              </div>
+            </div>
+            <div className="video-badge-large">WATCH VIDEO</div>
+          </div>
+          <div className="featured-info">
+            <h3>{dialysisVideo.alt}</h3>
+            <p>Watch a tour of our advanced dialysis facility.</p>
           </div>
         </div>
       </section>
