@@ -125,7 +125,7 @@ export default function Nav() {
               <li><Link href="/" onClick={closeMenu}>Home</Link></li>
               <li><Link href="/about" onClick={closeMenu}>About Us</Link></li>
               <li><Link href="/service" onClick={closeMenu}>Services</Link></li>
-              <li><Link href="/doctors" onClick={closeMenu}>Doctors</Link></li>
+             {/* <li><Link href="/doctors" onClick={closeMenu}>Doctors</Link></li> */}
 
               <li><Link href="/gallery" onClick={closeMenu}>Gallery</Link></li>
               <li><Link href="/schemes" onClick={closeMenu}>Schemes</Link></li>
@@ -141,13 +141,14 @@ export default function Nav() {
               </a>
             </div>
 
-            {/* CTA Button */}
+            {/* CTA Button 
             <Link href="/contact" className="nav-cta" onClick={closeMenu}>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
                 <path fillRule="evenodd" d="M6.75 2.25A.75.75 0 017.5 3v1.5h9V3A.75.75 0 0118 3v1.5h.75a3 3 0 013 3v11.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V7.5a3 3 0 013-3H6V3a.75.75 0 01.75-.75zm13.5 9a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5z" clipRule="evenodd" />
               </svg>
               <span>Book Appointment</span>
             </Link>
+            */}
           </div>
 
           {/* Hamburger Menu Button - Static SVG icon, no animation */}

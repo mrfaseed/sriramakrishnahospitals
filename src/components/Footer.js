@@ -62,9 +62,9 @@ const Footer = () => {
                         <li><Link href="/">Home</Link></li>
                         <li><Link href="/about">About Us</Link></li>
                         <li><Link href="/service">Services</Link></li>
-                        <li><Link href="/doctors">Doctors</Link></li>
+                    
                         <li><Link href="/schemes">Schemes</Link></li>
-                        <li><Link href="/contact">Contact</Link></li>
+                     
                     </ul>
                 </div>
 
@@ -89,10 +89,7 @@ const Footer = () => {
                         <Mail className="contact-icon" size={20} />
                         <p>Email: info@ramakrishnahospitals.com</p>
                     </div>
-                    <div className="contact-item">
-                        <Phone className="contact-icon" size={20} />
-                        <p>Phone: +91 80563 90983</p>
-                    </div>
+                  
                 </div>
             </div>
 

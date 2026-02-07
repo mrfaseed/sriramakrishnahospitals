@@ -178,8 +178,8 @@ export default function Home() {
             General Medicine, and advanced electrophysiology services.
           </p>
           <div className='home-hero-buttons'>
-            <Link href="/contact" className='btn-primary'>
-              Book Appointment
+            <Link href="/about" className='btn-primary'>
+              About Us
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
@@ -329,8 +329,8 @@ export default function Home() {
               Our specialists are ready to provide you with the best heart care.
               Don't wait—schedule your appointment today for a healthier tomorrow.
             </p>
-            <Link href="/contact" className='btn-primary' style={{ background: '#ffffff', color: '#C41E3A' }}>
-              Book an Appointment
+            <Link href="/about" className='btn-primary' style={{ background: '#ffffff', color: '#C41E3A' }}>
+              About Us
               <ArrowRightIcon />
             </Link>
           </div>
