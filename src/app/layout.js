@@ -9,7 +9,7 @@ import "../components/ServiceDetails.css";
 import "../components/Gallery.css";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
-import SchemesPopup from "../components/SchemesPopup";
+
 
 
 import Loader from "../components/Loader";
@@ -53,7 +53,7 @@ export default function RootLayout({ children }) {
         <Loader />
         <Nav />
         {children}
-        <SchemesPopup />
+
         <Footer />
       </body>
       {/* Force Refresh */}

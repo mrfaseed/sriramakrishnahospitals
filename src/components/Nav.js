@@ -128,7 +128,7 @@ export default function Nav() {
              {/* <li><Link href="/doctors" onClick={closeMenu}>Doctors</Link></li> */}
 
               <li><Link href="/gallery" onClick={closeMenu}>Gallery</Link></li>
-              <li><Link href="/schemes" onClick={closeMenu}>Schemes</Link></li>
+              {/* <li><Link href="/schemes" onClick={closeMenu}>Schemes</Link></li> */}
             </ul>
 
             {/* Mobile Contact Info */}
